@@ -1,0 +1,103 @@
+{
+  "work": [
+    {
+      "id": "soonvibes",
+      "company": "Soonvibes",
+      "url": "https://www.soonvibes.com/",
+      "start_date": "2017-06",
+      "end_date": "",
+      "skills": [
+        "python", "django", "react", "postgresql", "mongodb", "docker"
+      ]
+    },
+    {
+      "id": "sewan_2",
+      "company": "Sewan",
+      "url": "https://www.sewan.fr",
+      "start_date": "2014-10",
+      "end_date": "2017-05",
+      "skills": [
+        "python", "js", "php", "mysql"
+      ]
+    },
+    {
+      "id": "kdata",
+      "company": "CapitalData",
+      "intern": true,
+      "url": "https://www.capitaldata.fr/",
+      "start_date": "2014-02",
+      "end_date": "2014-08",
+      "skills": [
+        "go", "mysql"
+      ]
+    },
+    {
+      "id": "sewan_1",
+      "company": "Sewan",
+      "intern": true,
+      "url": "https://www.sewan.fr",
+      "start_date": "2013-06",
+      "end_date": "2013-09",
+      "skills": [
+        "python", "js", "php", "mysql"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "lionskins",
+      "name": "LionSkins",
+      "url": "https://lionskins.co/",
+      "repository": "https://github.com/julienc91/lionskins",
+      "skills": [
+        "python", "flask", "graphql", "react", "docker"
+      ]
+    },
+    {
+      "id": "ezshare",
+      "name": "ezshare",
+      "url": "https://ezshare.julienc.io",
+      "repository": "https://github.com/julienc91/ezshare",
+      "skills": [
+        "react", "webrtc"
+      ]
+    },
+    {
+      "id": "karlkmusic",
+      "name": "Karlk Music",
+      "url": "https://karlkmusic.vercel.app",
+      "repository": "https://github.com/julienc91/karlkmusic",
+      "skills": [
+        "react"
+      ]
+    },
+    {
+      "id": "multidl",
+      "name": "Multidl",
+      "repository": "https://github.com/julienc91/multidl",
+      "skills": [
+        "python"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "enseirb",
+      "name": "ENSEIRB-MATMECA",
+      "url": "https://enseirb-matmeca.bordeaux-inp.fr/",
+      "date": "2011 - 2014"
+    },
+    {
+      "id": "copenhagen",
+      "name": "Copenhagen University College of Engineering",
+      "url": "https://www.dtu.dk/english",
+      "date": "2012"
+    },
+    {
+      "id": "cpge",
+      "name": "CPGE MPSI/MP - Lycée Pothier",
+      "url": "https://www.lycee-pothier.com/cpge/",
+      "date": "2009-2011"
+    }
+  ]
+}

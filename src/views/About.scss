@@ -1,0 +1,39 @@
+.about {
+
+  h2 {
+    &:not(:first-of-type) {
+      margin-top: 80px;
+    }
+
+    &::after {
+      color: var(--color-emphasis);
+      content: '/';
+      margin-left: 8px;
+    }
+  }
+
+  p {
+    letter-spacing: .5px;
+    max-width: 600px;
+  }
+
+  .item {
+    margin-bottom: 40px;
+
+    li {
+      align-items: center;
+      display: flex;
+      list-style-type: none;
+      margin-bottom: 5px;
+    }
+
+    svg {
+      margin-right: 10px;
+      width: 1.1rem;
+    }
+
+    a {
+      border-bottom: 1px solid var(--color-emphasis);
+    }
+  }
+}

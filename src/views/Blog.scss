@@ -1,0 +1,23 @@
+.blog {
+  .item {
+    margin-bottom: 40px;
+
+    h3::after {
+      color: var(--color-emphasis);
+      content: '/';
+      margin-left: 6px;
+    }
+
+    li {
+      align-items: center;
+      display: flex;
+      list-style-type: none;
+      margin-bottom: 5px;
+    }
+
+    svg {
+      margin-right: 10px;
+      width: 1.1rem;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+$oil: #111;
+$red: #e11;
+$white: #fff;
+
+$color-background: $white !default;
+$color-emphasis: $red !default;
+$color-text: $oil !default;
+
+:root {
+  --color-background: #{$color-background};
+  --color-emphasis: #{$color-emphasis};
+  --color-text: #{$color-text};
+}
+
+@mixin color-transition {
+  transition: color .5s ease-in, background-color .5s ease-out;
+}

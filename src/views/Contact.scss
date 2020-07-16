@@ -1,0 +1,32 @@
+.contact {
+  .email::before {
+    content: 'contact';
+  }
+
+  .email::after {
+    content: 'julienc.io';
+  }
+
+  ul {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+  }
+
+  li {
+    align-items: center;
+    display: flex;
+    list-style-type: none;
+    margin: 10px;
+
+    > svg {
+      margin-right: 10px;
+      max-width: 1rem;
+      min-width: 1rem;
+    }
+
+    a {
+      border-bottom: 1px solid var(--color-emphasis);
+    }
+  }
+}

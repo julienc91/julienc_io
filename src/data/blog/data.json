@@ -1,0 +1,20 @@
+[
+  {
+    "slug": "mettre_a_jour_automatiquement_ses_images_docker",
+    "title": "Mettre à jour automatiquement ses images Docker",
+    "date": "2017-05-21",
+    "tags": ["docker"]
+  },
+  {
+    "slug": "utiliser_le_client_docker_sans_etre_root",
+    "title": "Utiliser le client Docker sans être root",
+    "date": "2017-02-28",
+    "tags": ["docker"]
+  },
+  {
+    "slug": "grep_par_l_exemple",
+    "title": "Grep par l'exemple",
+    "date": "2014-06-21",
+    "tags": ["shell"]
+  }
+]

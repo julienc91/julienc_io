@@ -1,0 +1,38 @@
+.home {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  height: 60%;
+  justify-content: center;
+  text-align: right;
+
+  header {
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    h1 {
+      font-size: 2rem;
+      margin: 15px 0;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin: 10px 0 15px;
+    }
+
+    .red-text {
+      color: var(--color-emphasis);
+      display: inline-block;
+      font-size: 9rem;
+      margin: 0 20px;
+      width: 120px;
+    }
+  }
+
+  .spacer {
+    flex: 0 1 30%;
+    width: 100%;
+  }
+}

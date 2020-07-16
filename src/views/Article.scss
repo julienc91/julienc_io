@@ -1,0 +1,69 @@
+@import '../globals';
+
+.article {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  article {
+    max-width: 800px;
+    overflow: hidden;
+  }
+
+  .metadata {
+    margin: -20px 0 40px;
+
+    li {
+      align-items: center;
+      display: flex;
+      list-style-type: none;
+      margin-bottom: 5px;
+    }
+
+    svg {
+      margin-right: 10px;
+      width: 1.1rem;
+    }
+  }
+
+  .article-content {
+    letter-spacing: .5px;
+    margin-bottom: 50px;
+
+    @media screen and (max-width: 800px) {
+      letter-spacing: normal;
+    }
+
+    pre {
+      @include color-transition;
+
+      background: var(--color-text);
+      color: var(--color-background);
+      font-size: .8rem;
+      overflow-x: auto;
+      padding: 5px 10px;
+    }
+
+    pre code b {
+      color: var(--color-emphasis);
+    }
+  }
+
+  .article-others {
+    margin-left: 20px;
+    max-height: 400px;
+    position: sticky;
+    top: 60px;
+
+    li {
+      list-style: none;
+      margin-bottom: 15px;
+      max-width: 300px;
+    }
+
+    li::before {
+      color: var(--color-emphasis);
+      content: '../';
+    }
+  }
+}
