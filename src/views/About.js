@@ -111,8 +111,8 @@ const About = () => {
           </Trans>
           {' '}
           <Trans i18nKey='About.legals.source'>
-            <a href='https://github.com/julienc91/julienc_io2/blob/master/LICENSE'>-</a>
-            <a href='https://github.com/julienc91/julienc_io2'>-</a>
+            <a href='https://github.com/julienc91/julienc_iov2/blob/master/LICENSE'>-</a>
+            <a href='https://github.com/julienc91/julienc_iov2'>-</a>
           </Trans>
         </p>
       </section>
