@@ -1,5 +1,11 @@
 [
   {
+    "slug": "des_cli_en_python_avec_fire",
+    "title": "Des CLI en Python avec Fire",
+    "date": "2020-07-15",
+    "tags": ["python", "shell"]
+  },
+  {
     "slug": "mettre_a_jour_automatiquement_ses_images_docker",
     "title": "Mettre à jour automatiquement ses images Docker",
     "date": "2017-05-21",
