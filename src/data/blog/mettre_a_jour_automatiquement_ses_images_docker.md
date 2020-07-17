@@ -1,6 +1,6 @@
-Mettre à jour son système, c'est important. Il n'y a qu'à voir tous les articles traitants de [WannaCry](https://fr.wikipedia.org/wiki/WannaCry) si jamais ce n'était pas déjà assez clair. Et ce n'est pas parce qu'une application est *conteneurisée* qu'elle devrait échapper à cette règle.
+Garder son système et ses dépendances à jour est primordial pour la sécurité. Et ce n'est pas parce qu'une application est *conteneurisée* qu'elle devrait échapper à cette règle.
 
-En effet, bien que Docker apporte indéniablement une couche de sécurité supplémentaire en isolant l'applicatif du système hôte, il n'est pas exempt de failles plus ou moins critiques pouvant permettre l'escalade, par exemple la [CVE-2016-9962](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9962) rendue publique au début de cette année. Et puis de toute façon, c'est toujours mieux de pouvoir profiter des dernières fonctionnalités, non ?
+En effet, bien que Docker apporte indéniablement une couche de sécurité supplémentaire en isolant l'applicatif du système hôte, il n'est pas exempt de failles plus ou moins critiques pouvant permettre l'escalade, par exemple la [CVE-2016-9962](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9962) rendue publique au début de cette année. Et puis de toute façon, c'est toujours mieux de pouvoir profiter des dernières fonctionnalités, non&nbsp;?
 
 Le problème, c'est qu'une fois qu'un container est créé, on a (en tout cas moi) souvent tendance à le laisser faire sa vie dans son coin. Et contrairement à des gestionnaires de paquets tels que `dnf` ou `apt-get` pour lesquels on peut configurer les [mises à jour automatiques](https://wiki.debian.org/UnattendedUpgrades), Docker n'intègre pas, à ce jour, de moyen simple de faire de même.
 

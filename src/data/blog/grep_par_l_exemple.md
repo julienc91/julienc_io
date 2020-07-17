@@ -2,11 +2,11 @@
 
 ### La recherche de base
 
-La manière la plus simple d'utiliser `grep` est de suivre la forme suivante:
+La manière la plus simple d'utiliser `grep` est de suivre la forme suivante&nbsp;:
 
     $> grep <motif> <fichier>
 
-Cette syntaxe de base va chercher dans le fichier donné l'ensemble des lignes contenant le motif indiqué. Par exemple :
+Cette syntaxe de base va chercher dans le fichier donné l'ensemble des lignes contenant le motif indiqué. Par exemple&nbsp;:
 
 <pre><code>$> grep 'lorem' lorem_ipsum.txt
 Donec ligula libero, egestas et sapien eget, ullamcorper iaculis <b>lorem</b>.

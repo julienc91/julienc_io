@@ -16,7 +16,7 @@ const Article = () => {
   const { slug } = useParams()
   const [content, setContent] = useState(null)
 
-  const article = data.find(a => a.slug === slug)
+  const article = data.find(a => a.slug === slug && !a.disabled)
 
   // fetch the related md file
   useEffect(() => {
@@ -36,7 +36,7 @@ const Article = () => {
   }
 
   const nbOtherArticles = 5
-  const otherArticles = shuffle(data.filter(otherArticle => otherArticle.slug !== slug)).slice(0, nbOtherArticles)
+  const otherArticles = shuffle(data.filter(otherArticle => otherArticle.slug !== slug && !otherArticle.disabled)).slice(0, nbOtherArticles)
 
   return (
     <div className='page article'>

@@ -13,7 +13,7 @@ const Blog = () => {
     <div className='page blog'>
       <h1 className='page-title'>{t('Blog.title')}</h1>
 
-      {data.map((article, i) => (
+      {data.filter(article => !article.disabled).map((article, i) => (
         <div key={i} className='item'>
           <h3>
             <Link to={`/blog/${article.slug}`}>{article.title}</Link>
