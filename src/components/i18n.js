@@ -12,6 +12,9 @@ i18n
     supportedLngs: ['fr'],
     interpolation: {
       escapeValue: false
+    },
+    react: {
+      useSuspense: false // gatsby doesn't work with suspense...
     }
   })
 
