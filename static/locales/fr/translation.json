@@ -1,0 +1,82 @@
+{
+  "Menu": {
+    "home": "julienc.io",
+    "about": "about",
+    "blog": "blog",
+    "contact": "contact"
+  },
+  "About": {
+    "title": "À propos",
+    "work": {
+      "title": "Travail",
+      "item_title": "{{title}} - {{company}}",
+      "intern": "(stage)",
+      "soonvibes": {
+        "title": "Lead Developer",
+        "description": "Responsable technique, maintenance et évolution de la plateforme web, conception d'API, rédaction des spécifications conjointement avec le responsable produit, supervisation des développements internes et externes."
+      },
+      "sewan_2": {
+        "title": "Développeur Python",
+        "description": "Développeur backend, puis Lead Developer, spécialisé dans la branche facturation de l'application. Contraintes de haute disponibilité, de criticité des informations, et de traitement en quasi-temps réel."
+      },
+      "kdata": {
+        "title": "Développeur R&D",
+        "description": "Conception d'applications en Go pour le traitement générique de grands volumes de données émanant de divers clients."
+      },
+      "sewan_1": {
+        "title": "Développeur full stack",
+        "description": "Développement et intégration à l'application web d'un système de commande et de gestions de noms de domaines."
+      }
+    },
+    "projects": {
+      "title": "Réalisations",
+      "lionskins": {
+        "description": "Comparateur de prix pour les <i>skins</i> du jeu «\u00A0Counter-Strike: Global Offensive\u00A0». Plus de 10\u00A0000 items y sont répertoriés et actualisés quotidiennement à partir des données de divers sites revendeurs."
+      },
+      "ezshare": {
+        "description": "Outil de partage de fichiers en pair à pair avec la technologie WebRTC, mettant l'accent sur l'anonymat."
+      },
+      "karlkmusic": {
+        "description": "Site vitrine de l'artiste Karlk."
+      },
+      "multidl": {
+        "description": "Utilitaire en ligne de commande permettant le téléchargement en parallèle de plusieurs fichiers."
+      }
+    },
+    "education": {
+      "title": "Formation",
+      "enseirb": {
+        "description": "Cycle d'ingénieur en informatique, en spécialisation réseaux et systèmes répartis."
+      },
+      "copenhagen": {
+        "description": "Université d'été sur les thématiques de la théorie des jeux et des technologies de télémédecine."
+      },
+      "cpge": {
+        "description": "Classe préparatoire aux grandes écoles, spécialisation maths, physique et sciences de l'ingénieur, et option informatique."
+      }
+    },
+    "legals": {
+      "title": "Mentions légales",
+      "privacy": "Ce site est garanti sans cookie ni tracker.",
+      "content": "Le contenu est publié sous <0>licence CC BY 4.0</0>.",
+      "source": "Le code source est publié sous <0>licence MIT</0> et disponible <1>sur GitHub</1>."
+    }
+  },
+  "Article": {
+    "read_other": "À lire ensuite"
+  },
+  "Blog": {
+    "title": "Blog"
+  },
+  "Contact": {
+    "title": "Contact"
+  },
+  "Home": {
+    "title": "~",
+    "subtitle": "Développeur"
+  },
+  "NotFound": {
+    "title": "404",
+    "go_back": "cd /"
+  }
+}

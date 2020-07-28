@@ -1,0 +1,31 @@
+@import '../globals';
+
+footer {
+  bottom: 10px;
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  right: 10px;
+
+  .switch {
+    @include color-transition;
+
+    align-items: center;
+    background: var(--color-text);
+    border: 0;
+    border-radius: 50%;
+    box-shadow: none;
+    color: var(--color-background);
+    cursor: pointer;
+    display: flex;
+    font-size: 1.4rem;
+    height: 2rem;
+    justify-content: center;
+    margin-left: 15px;
+    width: 2rem;
+
+    @media not screen {
+      display: none;
+    }
+  }
+}
