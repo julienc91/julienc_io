@@ -43,6 +43,7 @@ module.exports = {
         icon: 'content/assets/logo512.png'
       }
     },
-    'gatsby-plugin-react-helmet'
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-meta-redirect'
   ]
 }
