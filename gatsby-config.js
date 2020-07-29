@@ -49,6 +49,7 @@ module.exports = {
       }
     },
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-meta-redirect'
+    'gatsby-plugin-meta-redirect',
+    'gatsby-plugin-sitemap'
   ]
 }
