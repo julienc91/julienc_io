@@ -1,12 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import Footer from './footer'
 import Menu from './menu'
-import './i18n'
+import Spinner from './spinner'
+import { setCallback } from './i18n'
 import './layout.scss'
 
-const Page = props => {
+const Layout = props => {
   const { children, className } = props
+  const [fakeSuspense, setFakeSuspense] = useState(true)
+
+  if (fakeSuspense) {
+    setCallback(() => setFakeSuspense(false))
+    return <Spinner />
+  }
   return (
     <>
       <Menu />
@@ -16,13 +23,13 @@ const Page = props => {
   )
 }
 
-Page.defaultProps = {
+Layout.defaultProps = {
   className: 'page'
 }
 
-Page.propTypes = {
+Layout.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string
 }
 
-export default Page
+export default Layout
