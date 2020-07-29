@@ -27,7 +27,7 @@
   }
 
   .article-content {
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
     margin-bottom: 50px;
 
     @media screen and (max-width: 800px) {
@@ -39,7 +39,7 @@
 
       background: var(--color-text);
       color: var(--color-background);
-      font-size: .8rem;
+      font-size: 0.8rem;
       overflow-x: auto;
       padding: 5px 10px;
     }

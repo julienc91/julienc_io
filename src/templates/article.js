@@ -31,7 +31,10 @@ const Article = ({ data }) => {
           </ul>
         </ul>
 
-        <div className='article-content' dangerouslySetInnerHTML={{ __html: article.html }} />
+        <div
+          className='article-content'
+          dangerouslySetInnerHTML={{ __html: article.html }}
+        />
       </article>
       <div className='article-others'>
         <h3>{t('Article.read_other')}</h3>
@@ -66,7 +69,10 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      filter: { fields: { slug: { ne: $slug } }, frontmatter: { disabled: { ne: true } } }
+      filter: {
+        fields: { slug: { ne: $slug } }
+        frontmatter: { disabled: { ne: true } }
+      }
       sort: { fields: [frontmatter___date], order: DESC }
       limit: 5
     ) {

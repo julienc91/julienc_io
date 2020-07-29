@@ -1,7 +1,7 @@
 ---
 title: Grep par l'exemple
-date: "2014-06-21"
-tags: ["shell"]
+date: '2014-06-21'
+tags: ['shell']
 ---
 
 `grep` est un outil incontournable dès lors qu'il est question d'utiliser son terminal. Pour autant, l'étendue de ses fonctionnalités fait que beaucoup d'entre elles sont méconnues. Cet article a pour but de montrer, au travers d'exemples, certaines des possibilités offertes par `grep`.
@@ -26,13 +26,13 @@ Il est tout à fait possible d'exécuter `grep` sur une liste de fichiers ou d'u
 
     $> grep 'ipsum' lorem1.txt lorem2.txt lorem3.txt
     $> grep 'ipsum' *.txt
-    
+
 Encore mieux, `grep` propose une option `-R` pour chercher de manière récursive dans l'ensemble des fichiers.
 
 <pre><code>$> grep -R 'ipsum' .
 lorem1.txt: Lorem <b>ipsum</b> dolor sit amet, consectetur adipiscing elit.
 lorem/lorem2.txt: Nullam eget congue <b>ipsum</b>.</code></pre>
-    
+
 Notez que le formatage du résultat peut varier selon si la recherche s'effectue sur un fichier ou sur plusieurs.
 
 #### Avec un pipe
@@ -42,7 +42,7 @@ Il est très fréquent d'utiliser `grep` après un `pipe` pour combiner différe
 <pre><code>$> echo "foo\nbar\nfoobar" | grep "foo"
 <b>foo</b>
 <b>foo</b>bar</code></pre>
-    
+
 ### Options utiles
 
 #### Compter les résultats
@@ -56,20 +56,20 @@ Si le motif peut apparaître plusieurs fois sur une ligne, il va par contre fall
 
     $> grep -o 'et' lorem_ipsum.txt | grep -c ''
     12
-    
+
 #### Connaître le numéro de ligne
 
 S'il faut trouver le numéro des lignes correspondantes, c'est l'option `-n` qu'il faut utiliser&nbsp;:
 
 <pre><code>$> grep -n 'ipsum' lorem_ipsum.txt
 3: Lorem <b>ipsum</b> dolor sit amet, consectetur adipiscing elit.</code></pre>
-    
+
 Par défaut, `grep` affiche le numéro de la ligne ainsi que la ligne (ou la correspondance seulement si `-o` est utilisé). Pour ne récupérer que les numéros de lignes, on peut combiner avec l'outil `cut`&nbsp;:
 
     $> grep -n 'ipsum' lorem_ipsum.txt | cut -f1 -d:
     3
-    
-#### Recherche en *case insensitive*
+
+#### Recherche en _case insensitive_
 
 Pour ne pas avoir à se soucier de la casse dans sa recherche, il y a l'option `-i`&nbsp;:
 
@@ -77,7 +77,7 @@ Pour ne pas avoir à se soucier de la casse dans sa recherche, il y a l'option `
 <b>Lorem</b> ipsum dolor sit amet, consectetur adipiscing elit.
 Donec ligula libero, egestas et sapien eget, ullamcorper iaculis <b>lorem</b>.
 Etiam est <b>lorem</b>, sollicitudin a libero ac, pulvinar suscipit orci.</code></pre>
-    
+
 #### Rechercher la non correspondance
 
 `grep` permet aussi de récupérer les lignes qui ne correspondent pas au motif donné en utilisant l'option `-v`. Cette option est très pratique lorsqu'on a besoin d'ignorer de nombreuses lignes sur une entrée donnée.
@@ -87,7 +87,6 @@ Etiam est <b>lorem</b>, sollicitudin a libero ac, pulvinar suscipit orci.</code>
     Mauris cursus diam justo, quis mollis sapien malesuada eu.
     Cras aliquam pulvinar viverra.
 
-    
 #### Correspondance de toute la ligne
 
 Et il est aussi possible de chercher les lignes qui correspondent exactement au motif donné:
@@ -102,7 +101,7 @@ L'option `-l` permet de lister les fichiers ayant au moins une correspondance av
     $> grep -l 'ipsum' *.txt
     lorem1.txt
     lorem2.txt
-    
+
 L'option `-L` permet, quant à elle, de lister les fichiers n'ayant aucune correspondance.
 
 #### Résultats avec contexte
@@ -121,7 +120,7 @@ Les options que énumérées dans cet article peuvent bien sûr être cumulées 
     $> grep -Rni 'lorem ipsum'
     lorem1.txt:1:Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     lorem2.txt:3:Lorem ipsum dolor sit amet.
-    
+
 ### Encore plus loin avec les expressions régulières
 
 Pourquoi se limiter à des motifs fixes lorsqu'on peut utiliser des expressions régulières? `grep` comprend par défaut la plupart des expressions régulières.

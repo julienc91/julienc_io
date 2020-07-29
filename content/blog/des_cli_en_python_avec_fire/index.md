@@ -1,7 +1,7 @@
 ---
 title: Des CLI en Python avec Fire
-date: "2020-07-15"
-tags: ["python", "shell"]
+date: '2020-07-15'
+tags: ['python', 'shell']
 ---
 
 Python est historiquement un langage très utilisé pour concevoir des applications en ligne de commande (ou _CLI_ pour l'acronyme anglais). Pendant longtemps, le module [`optparse`](https://docs.python.org/2/library/optparse.html) de la bibliothèque standard a permis aux développeur·euses de faciliter la conception de telles applications en offrant des outils pour gérer proprement les paramètres des programmes.
@@ -13,7 +13,6 @@ Mais le sujet d'aujourd'hui n'est pas dans bibliothèque standard, puisqu'il s'a
 L'installation se fait facilement via `pip`, comme c'est l'usage&nbsp;:
 
     pip install fire
-
 
 ## Un exemple simple pour commencer
 
@@ -59,7 +58,6 @@ if __name__ == "__main__":
 
 Et tout est là&nbsp;! `Fire` va se charger de tout, que ce soit de la vérification des paramètres, des erreurs, de l'aide à l'utilisateur, et de l'affichage de la sortie. Les paramètres optionnels (si par exemple le paramètre de la fonction `increment` avait eu une valeur par défaut) sont également pris en compte.
 
-
 <pre><code>$ python test.py
 <b>ERROR:</b> The function received no value for the required argument: i
 Usage: test.py I
@@ -87,11 +85,9 @@ $ python test.py 16
 17
 </code></pre>
 
-
 ## Démultiplions les fonctions
 
 Là où toute la puissance de `Fire` s'exprime, c'est certainement losqu'il s'agit de gérer plusieurs fonctions en même temps. Ajoutons par exemple une seconde fonction à notre script&nbsp;:
-
 
 ```python
 import fire
@@ -105,7 +101,7 @@ def increment(i: int):
     """
     return i + 1
 
-    
+
 def decrement(i: int):
     """
     Remove 1 to the given integer.
@@ -113,7 +109,7 @@ def decrement(i: int):
     :return: i - 1
     """
     return i - 1
-    
+
 
 if __name__ == "__main__":
     fire.Fire()
@@ -132,7 +128,6 @@ Bien sûr, le `--help` s'adapte en conséquence.
 
 En comparaison, réaliser la même chose avec `argparse` aurait nécessité un bloc `if`/`else` pour rediriger _à la main_ vers la bonne fonction. Et dans le cas où nos fonctions auraient des signatures différentes, il aurait en plus fallu définir les différents paramètres dans des groupes exclusifs distincts.
 
-
 ## La même, avec des classes
 
 Il est possible d'obtenir le même résultat en utilisant des méthodes au lieu de fonctions simples.
@@ -141,13 +136,13 @@ Il est possible d'obtenir le même résultat en utilisant des méthodes au lieu 
 class AddOrRemove:
     def __init__(self, n):
         self.n = n
-    
+
     def add(self, i):
         return i + self.n
-        
+
     def remove(self, i):
         return i - self.n
-    
+
 
 if __name__ == "__main__":
     instance = AddOrRemove(1)
@@ -158,7 +153,6 @@ if __name__ == "__main__":
 ```
 
 Il aurait été possible d'appeler `Fire` avec `fire.Fire(instance)`, mais il aurait alors fallu utiliser les noms `add` et `remove` en ligne de commande. L'instanciation de `Fire` telle qu'elle est faite dans l'exemple précédent permet de lister les méthodes que l'on souhaite rendre disponibles, ainsi que leur nom d'usage.
-
 
 ## Et bien plus encore
 

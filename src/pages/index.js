@@ -18,7 +18,6 @@ const Index = () => {
       </header>
 
       <div className='spacer' />
-
     </Layout>
   )
 }

@@ -4,7 +4,11 @@ import { faLightbulb } from '@fortawesome/free-regular-svg-icons'
 import './footer.scss'
 
 const Footer = () => {
-  const [colors, setColors] = useState({ text: '#111', background: '#fff', night: false })
+  const [colors, setColors] = useState({
+    text: '#111',
+    background: '#fff',
+    night: false
+  })
 
   const toggleNightMode = () => {
     const text = colors.background
@@ -24,6 +28,5 @@ const Footer = () => {
     </footer>
   )
 }
-
 
 export default Footer

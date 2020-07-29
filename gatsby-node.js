@@ -6,11 +6,26 @@ exports.createPages = async ({ graphql, actions }) => {
 
   // create redirects for urls in v1
   createRedirect({ fromPath: '/projects', toPath: '/about', isPermanent: true })
-  createRedirect({ fromPath: '/19/mettre_a_jour_automatiquement_ses_images_docker', toPath: '/blog/mettre_a_jour_automatiquement_ses_images_docker', isPermanent: true })
-  createRedirect({ fromPath: '/18/utiliser_le_client_docker_sans_etre_root', toPath: '/blog/utiliser_le_client_docker_sans_etre_root', isPermanent: true })
-  createRedirect({ fromPath: '/3/git_les_commandes_qui_sauvent_la_vie', toPath: '/blog/git_les_commandes_qui_sauvent_la_vie', isPermanent: true })
-  createRedirect({ fromPath: '/1/grep_par_l_exemple', toPath: '/blog/grep_par_l_exemple', isPermanent: true })
-
+  createRedirect({
+    fromPath: '/19/mettre_a_jour_automatiquement_ses_images_docker',
+    toPath: '/blog/mettre_a_jour_automatiquement_ses_images_docker',
+    isPermanent: true
+  })
+  createRedirect({
+    fromPath: '/18/utiliser_le_client_docker_sans_etre_root',
+    toPath: '/blog/utiliser_le_client_docker_sans_etre_root',
+    isPermanent: true
+  })
+  createRedirect({
+    fromPath: '/3/git_les_commandes_qui_sauvent_la_vie',
+    toPath: '/blog/git_les_commandes_qui_sauvent_la_vie',
+    isPermanent: true
+  })
+  createRedirect({
+    fromPath: '/1/grep_par_l_exemple',
+    toPath: '/blog/grep_par_l_exemple',
+    isPermanent: true
+  })
 
   const articleTemplate = path.resolve('./src/templates/article.js')
   const result = await graphql(

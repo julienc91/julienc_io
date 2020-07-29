@@ -1,7 +1,7 @@
 ---
 title: Utiliser le client Docker sans être root
-date: "2017-02-28"
-tags: ["docker"]
+date: '2017-02-28'
+tags: ['docker']
 ---
 
 Avec une installation de base de Docker sur un système Linux, l'utilisation de l'applicatif est généralement limitée à l'utilisateur `root`. Bien que la [documentation](https://docs.docker.com/engine/installation/linux/linux-postinstall/#/manage-docker-as-a-non-root-user) officielle explique comment contourner ce problème, trop peu d'utilisateurs ont connaissance de cette possibilité. Or, l'exécution de programmes avec un niveau de privilège inadapté est une [mauvaise pratique](http://serverfault.com/a/57964/234064) pouvant créer une brèche de sécurité dans le système. Et Docker n'est pas une exception à la règle&nbsp;!

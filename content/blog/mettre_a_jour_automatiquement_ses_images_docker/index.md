@@ -1,10 +1,10 @@
 ---
 title: Mettre à jour automatiquement ses images Docker
-date: "2017-05-21"
-tags: ["docker"]
+date: '2017-05-21'
+tags: ['docker']
 ---
 
-Garder son système et ses dépendances à jour est primordial pour la sécurité. Et ce n'est pas parce qu'une application est *conteneurisée* qu'elle devrait échapper à cette règle.
+Garder son système et ses dépendances à jour est primordial pour la sécurité. Et ce n'est pas parce qu'une application est _conteneurisée_ qu'elle devrait échapper à cette règle.
 
 En effet, bien que Docker apporte indéniablement une couche de sécurité supplémentaire en isolant l'applicatif du système hôte, il n'est pas exempt de failles plus ou moins critiques pouvant permettre l'escalade, par exemple la [CVE-2016-9962](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9962) rendue publique au début de cette année. Et puis de toute façon, c'est toujours mieux de pouvoir profiter des dernières fonctionnalités, non&nbsp;?
 
@@ -54,12 +54,12 @@ Ce qui donne chez moi :
         v2tec/watchtower \
         --schedule "0 0 4 * * *" \
         --cleanup
-    
+
 Plus besoin donc de se soucier de mettre à jour ses containers, Watchtower le fait tout seul, et ça fonctionne parfaitement&nbsp;!
 
-    $ docker logs watchtower  
-    time="2017-05-18T04:00:00Z" level=info msg="Checking containers for updated images" 
-    time="2017-05-18T04:00:06Z" level=info msg="Found new kylemanna/openvpn:latest image (sha256:97ede0cd802f13e7276d7f69cfac1cc6d29181d8b546a4a6706c7f30297fc9bc)" 
-    time="2017-05-18T04:00:12Z" level=info msg="Stopping /openvpn (25f2831bc81be97c8ef5bc2a2bc36948a18f2382b23638240e38a4e220709f3a) with SIGTERM" 
-    time="2017-05-18T04:00:13Z" level=info msg="Creating /openvpn" 
+    $ docker logs watchtower
+    time="2017-05-18T04:00:00Z" level=info msg="Checking containers for updated images"
+    time="2017-05-18T04:00:06Z" level=info msg="Found new kylemanna/openvpn:latest image (sha256:97ede0cd802f13e7276d7f69cfac1cc6d29181d8b546a4a6706c7f30297fc9bc)"
+    time="2017-05-18T04:00:12Z" level=info msg="Stopping /openvpn (25f2831bc81be97c8ef5bc2a2bc36948a18f2382b23638240e38a4e220709f3a) with SIGTERM"
+    time="2017-05-18T04:00:13Z" level=info msg="Creating /openvpn"
     time="2017-05-18T04:00:13Z" level=info msg="Removing image sha256:76fa63e4bf1139b4b83b78f3d626eca18ed0702e89f1afdb20ca0b7f48f16c66"

@@ -1,7 +1,7 @@
 ---
 title: Nom de domaine et DNS sur un serveur dédié
-date: "2014-07-05"
-tags: ["devops"]
+date: '2014-07-05'
+tags: ['devops']
 disabled: true
 ---
 
@@ -11,7 +11,7 @@ Les informations qui suivent se basent sur une distribution Debian 8, un nom de 
 
 ### Modification des serveurs DNS associés au domaine
 
-La première chose à faire est de signaler à OVH que le domaine est à faire pointer sur notre propre serveur. Pour cela, rendez-vous sur l'[interface d'administration d'OVH][1], puis dans la section *Domaine & DNS*, et enfin *Serveurs DNS*. Le serveur primaire à indiquer est le vôtre (il est indiqué sur l'interface de gestion Kimsufi), et le serveur secondaire à utiliser est celui de Kimsufi, à savoir `ns.kimsufi.com`. Ce qui donne en principe&nbsp;:
+La première chose à faire est de signaler à OVH que le domaine est à faire pointer sur notre propre serveur. Pour cela, rendez-vous sur l'[interface d'administration d'OVH][1], puis dans la section _Domaine & DNS_, et enfin _Serveurs DNS_. Le serveur primaire à indiquer est le vôtre (il est indiqué sur l'interface de gestion Kimsufi), et le serveur secondaire à utiliser est celui de Kimsufi, à savoir `ns.kimsufi.com`. Ce qui donne en principe&nbsp;:
 
 ![Serveurs DNS](/static/images/articles/ovh_dns.png)
 
@@ -26,24 +26,24 @@ Direction notre serveur dédié en vue d'installer `named`, notre serveur DNS. S
 Pour commencer, on édite le fichier `/etc/bind/named.conf.local` pour lui indiquer les zones qu'il va devoir gérer&nbsp;:
 
     zone "mydomain.com" {
-	    type master;
-	    file ""/etc/bind/zones/db.mydomain.com"";
-	    allow-transfer {XX.XX.XX.XX;};
+        type master;
+        file ""/etc/bind/zones/db.mydomain.com"";
+        allow-transfer {XX.XX.XX.XX;};
     	allow-query { any; };
-	    notify yes;
+        notify yes;
     };
     zone ""YY.YY.YY.YY.in-addr.arpa"" {
-	    type master;
-	    file ""/etc/bind/zones/YY.YY.YY.YY.in-addr.arpa"";
-	    allow-transfer {XX.XX.XX.XX;};
+        type master;
+        file ""/etc/bind/zones/YY.YY.YY.YY.in-addr.arpa"";
+        allow-transfer {XX.XX.XX.XX;};
     	allow-query { any; };
-	    notify yes;
+        notify yes;
     };
 
-En veillant bien sûr à remplacer *mydomain.com* par le domaine en question, et:
+En veillant bien sûr à remplacer _mydomain.com_ par le domaine en question, et:
 
-* `XX.XX.XX.XX` par l'adresse ip du DNS secondaire sélectionné précédemment (pour Kimsufi, ce sera `213.186.33.199`)
-* `YY.YY.YY.YY` par l'adresse ip du serveur, écrite à l'envers. Par exemple, c'est l'adresse ip du serveur est `10.20.30.40`, il faudra indiquer `40.30.20.10`.
+- `XX.XX.XX.XX` par l'adresse ip du DNS secondaire sélectionné précédemment (pour Kimsufi, ce sera `213.186.33.199`)
+- `YY.YY.YY.YY` par l'adresse ip du serveur, écrite à l'envers. Par exemple, c'est l'adresse ip du serveur est `10.20.30.40`, il faudra indiquer `40.30.20.10`.
 
 Il est également possible (voire conseillé si vous comptez aussi administrer votre serveur mail) d'ajouter une zone reverse IPV6, selon le même schéma.
 
@@ -79,13 +79,13 @@ Bien sûr, si vous savez ce que vous faites, vous pouvez ajouter autant d'entré
 
 Les valeurs à remplacer cette fois sont&nbsp;:
 
-* `mydomain.com` par le nom de domaine à gérer
-* `10.20.30.40` par l'adresse ip du serveur
-* `ns1234.ip-10-20-30.eu` par le nom du serveur (celui indiqué comme étant DNS primaire)
-* `ns.kimsufi.com` par le nom du DNS secondaire
-* `abcdef` par le code de vérification de délégation
+- `mydomain.com` par le nom de domaine à gérer
+- `10.20.30.40` par l'adresse ip du serveur
+- `ns1234.ip-10-20-30.eu` par le nom du serveur (celui indiqué comme étant DNS primaire)
+- `ns.kimsufi.com` par le nom du DNS secondaire
+- `abcdef` par le code de vérification de délégation
 
-Le code de vérification vous est donné depuis l'interface d'admnistration Kimsufi, dans *DNS/Ajouter un DNS secondaire*&nbsp;:
+Le code de vérification vous est donné depuis l'interface d'admnistration Kimsufi, dans _DNS/Ajouter un DNS secondaire_&nbsp;:
 
 ![DNS sur Kimsufi](/static/images/articles/kimsufi_dns.png)
 
@@ -99,4 +99,4 @@ Et, si tout se passe comme prévu, votre nouveau nom de domaine pointe désormai
     $> ping mydomain.com
     PING mydomain.com (10.20.30.40) 56(84) bytes of data.
 
-  [1]: https://www.ovh.com/manager
+[1]: https://www.ovh.com/manager

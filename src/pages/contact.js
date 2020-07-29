@@ -1,7 +1,11 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faLinkedin, faStackOverflow } from '@fortawesome/free-brands-svg-icons'
+import {
+  faGithub,
+  faLinkedin,
+  faStackOverflow
+} from '@fortawesome/free-brands-svg-icons'
 import { faAt, faKey } from '@fortawesome/free-solid-svg-icons'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -28,7 +32,9 @@ const Contact = () => {
         </li>
         <li>
           <FontAwesomeIcon icon={faLinkedin} />
-          <a href='https://www.linkedin.com/in/julien-chaumont/'>julien-chaumont</a>
+          <a href='https://www.linkedin.com/in/julien-chaumont/'>
+            julien-chaumont
+          </a>
         </li>
         <li>
           <FontAwesomeIcon icon={faKey} />

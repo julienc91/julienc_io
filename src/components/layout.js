@@ -1,4 +1,4 @@
-import React  from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import Footer from './footer'
 import Menu from './menu'
@@ -10,9 +10,7 @@ const Page = props => {
   return (
     <>
       <Menu />
-      <main className={className}>
-        {children}
-      </main>
+      <main className={className}>{children}</main>
       <Footer />
     </>
   )

@@ -1,7 +1,7 @@
 ---
 title: Certificats SSL Let's Encrypt
-date: "2015-12-13"
-tags: ["devops"]
+date: '2015-12-13'
+tags: ['devops']
 disabled: true
 ---
 
@@ -14,7 +14,7 @@ La génération de certificats passe par un logiciel libre fourni par l'autorit�
 
     $> git clone https://github.com/letsencrypt/letsencrypt
     $> cd letsencrypt
-    
+
 Le client se met à jour de lui-même à chaque exécution; donc pas besoin de systématiquement mettre à jour vos sources manuellement&nbsp;!
 
 Le binaire `letsencrypt-auto` est un _wrapper_ du client qui va installer toutes les dépendances en fonction de votre OS, de sorte que vous n'avez pas à vous en soucier&nbsp;!
@@ -29,11 +29,11 @@ Elle est très simple à exécuter, mais a pour inconvénient de vous forcer à 
 Il suffit d'appeler le client de la sorte :
 
     $> ./letsencrypt-auto certonly --standalone --standalone-supported-challenges [challenge] -d [domain] -d [subdomain1] -d [subdomain2]
-    
+
 Le `[challenge]` est lié au port qui sera utilisé par le client. Ce sera `http-01` pour utiliser le port 80, ou `tls-sni-01` pour le 443. Vous pouvez ensuite indiquer autant de domaines et de sous-domaines que vous le souhaitez (Let's Encrypt ne permet pas encore de générer des certificats wildcard), il vous faudra donc indiquer tous vos sous-domaines. Afin de faire propre, il est recommandé de générer un certificat par domaine principal; même s'il est en pratique tout à fait possible de générer un certificat qui s'appliquerait à plusieurs domaines principaux en même temps. Ce qui donne, dans mon cas&nbsp;:
 
     $> ./letsencrypt-auto certonly --standalone --standalone-supported-challenges tls-sni-01 -d julienc.io -d www.julienc.io -d dev.julienc.io
-    
+
 À la première exécution, le client vous demandera également d'indiquer votre adresse mail afin de recevoir les notifications sur vos certificats générés, notamment pour les questions de renouvellement.
 N'oubliez pas de redémarrer votre serveur web à la fin de l'opération&nbsp;!
 
@@ -42,13 +42,13 @@ N'oubliez pas de redémarrer votre serveur web à la fin de l'opération&nbsp;!
 Cette seconde méthode ne vous contraindra pas à redémarrer votre serveur web. Toutefois, elle peut être légèrement difficile à mettre en place dans certains cas, puisqu'elle demande à rendre accessibles des fichiers statiques à une adresse [bien précise](https://tools.ietf.org/html/rfc5785) :
 
     http://julienc.io/.well_known/acme-challenge/some_random_filename
-    
-Si votre site consiste simplement en des fichiers servis directement selon leur emplacement sur votre racine, vous n'aurez a priori aucun problème (veillez peut-être à autoriser la consultation de dossiers cachés sur la configuration de votre serveur web). Mais si jamais celui-ci est plus compliqué (si vous utilisez un framework web tel que Django par exemple), il va falloir aller modifier la configuration de votre serveur web afin d'autoriser la consultation de ces fichiers. Pour Nginx (1.6.2), voici ce que j'ai ajouté à *l'ensemble* de mes fichiers de configuration dans `/etc/nginx/sites-enabled/`, pour chacun des domaines et sous-domaines que je souhaitais certifier&nbsp;:
+
+Si votre site consiste simplement en des fichiers servis directement selon leur emplacement sur votre racine, vous n'aurez a priori aucun problème (veillez peut-être à autoriser la consultation de dossiers cachés sur la configuration de votre serveur web). Mais si jamais celui-ci est plus compliqué (si vous utilisez un framework web tel que Django par exemple), il va falloir aller modifier la configuration de votre serveur web afin d'autoriser la consultation de ces fichiers. Pour Nginx (1.6.2), voici ce que j'ai ajouté à _l'ensemble_ de mes fichiers de configuration dans `/etc/nginx/sites-enabled/`, pour chacun des domaines et sous-domaines que je souhaitais certifier&nbsp;:
 
     server {
         server_name julienc.io
         ...
-        
+
         location '/.well-known/acme-challenge' {
             root /tmp/letsencrypt-auto;
         }
@@ -57,12 +57,12 @@ Si votre site consiste simplement en des fichiers servis directement selon leur 
 Il ne reste plus qu'à rafraîchir la configuration du serveur web :
 
     $> nginx -s reload
-    
+
 Et à générer nos certificats :
 
     $> mkdir -p /tmp/letsencrypt-auto
     $> ./letsencrypt-auto certonly --webroot --webroot-path=/tmp/letsencrypt-auto -d julienc.io -d www.julienc.io -d dev.julienc.io
-    
+
 Si comme moi vous avez eu besoin de modifier votre configuration, veillez à ce que le chemin de `--webroot-path` soit le même que celui précisé dans le fichier de configuration&nbsp;! Sinon, indiquez simplement le chemin vers la racine des sources de votre site (`/var/www/julienc.io/` par exemple).
 
 ## L'installation des certificats
@@ -76,7 +76,7 @@ Voici ma configuration actuelle pour Nginx 1.6.2 :
         server_name  julienc.io;
 
         ...
-        
+
         ssl_certificate /etc/letsencrypt/live/julienc.io/fullchain.pem;
         ssl_certificate_key /etc/letsencrypt/live/julienc.io/privkey.pem;
         ssl_trusted_certificate /etc/letsencrypt/live/julienc.io/chain.pem;
@@ -97,9 +97,8 @@ Voici ma configuration actuelle pour Nginx 1.6.2 :
 
         add_header Strict-Transport-Security max-age=15768000;
     }
-    
-Une fois le serveur relancé, pensez à consulter https://www.ssllabs.com/ssltest/ pour vérifier que rien ne manque à votre configuration.
 
+Une fois le serveur relancé, pensez à consulter https://www.ssllabs.com/ssltest/ pour vérifier que rien ne manque à votre configuration.
 
 ## Renouvellement
 

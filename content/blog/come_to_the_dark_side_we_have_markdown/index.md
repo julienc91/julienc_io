@@ -1,7 +1,7 @@
 ---
 title: Come to the Dark Side, we have Markdown
-date: "2014-09-19"
-tags: ["markdown"]
+date: '2014-09-19'
+tags: ['markdown']
 disabled: true
 ---
 
@@ -29,6 +29,7 @@ Par exemple&nbsp;:
     Encore du texte
 
 > #### Un gros titre
+>
 > ##### Un sous-titre
 >
 > Du texte pour mon sous-titre
@@ -37,7 +38,7 @@ Par exemple&nbsp;:
 >
 > Encore du texte
 
-Une deuxième façon consiste à *souligner* le texte du titre, mais cette méthode n'autorise que deux niveaux de titres. Ainsi, le code suivant aura un rendu identique au précédent&nbsp;:
+Une deuxième façon consiste à _souligner_ le texte du titre, mais cette méthode n'autorise que deux niveaux de titres. Ainsi, le code suivant aura un rendu identique au précédent&nbsp;:
 
     Un gros titre
     =============
@@ -59,7 +60,7 @@ Pour insister sur un passage, entourez-le par le caractère `*` ou `_`. Le rendu
 
     Du texte. *Du texte sur lequel je souhaite insister*.
 
-> Du texte. *Du texte sur lequel je souhaite insister*.
+> Du texte. _Du texte sur lequel je souhaite insister_.
 
 Pour encore plus d'insistance (qui se traduit par l'utilisation de caractères en gras), doublez le caractère de balisage&nbsp;: `**` ou `__`.
 
@@ -71,7 +72,7 @@ Il est possible de combiner les deux pour produire du gras-italique&nbsp;:
 
     Du ***texte*** mis en avant
 
-> Du ***texte*** mis en avant
+> Du **_texte_** mis en avant
 
 Pour insérer du code, utilisez le caractère `` ` ``.
 
@@ -84,14 +85,14 @@ Pour insérer du code, utilisez le caractère `` ` ``.
 Les deux utilisent une syntaxe très proche, seul le caractère `!` est à ajouter pour le cas de l'image.
 
     J'insère [un lien](https://julienc.io).
-    
+
     Et voici une image:
     ![une image](https://julienc.io/static/images/articles/markdown.png)
-  
+
 > J'insère [un lien](https://julienc.io).
 >
 > Et voici une image:
->![une image](/static/images/articles/markdown.png)
+> ![une image](/static/images/articles/markdown.png)
 
 #### Listes
 
@@ -104,10 +105,10 @@ Il est aussi possible de créer une liste numérotée en utilisant `1.`, `2.`, e
       2. Un autre sous-item numéroté
     * Un autre item
 
-> * Un item
+> - Un item
 >   1. Un sous-item numéroté
 >   2. Un autre sous-item numéroté
-> * Un autre item
+> - Un autre item
 
 #### Blocs de code
 
@@ -128,7 +129,7 @@ Pour une citation, utilisez le caractère `>` en début de ligne. Les balises de
     >
     > Yoda
 
-> *Much to learn, you still have*
+> _Much to learn, you still have_
 >
 > Yoda
 
@@ -138,7 +139,7 @@ Il est enfin possible d'insérer du HTML directement dans un texte en Markdown, 
 
     Ce <b>*texte*</b> est à la fois en gras et en italique.
 
->  Ce <b>*texte*</b> est à la fois en gras et en italique.
+> Ce <b>_texte_</b> est à la fois en gras et en italique.
 
 ### Variantes
 

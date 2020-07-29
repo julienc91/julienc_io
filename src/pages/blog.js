@@ -17,23 +17,25 @@ const BlogIndex = ({ data }) => {
       <SEO title={t('Blog.title')} />
       <h1 className='page-title'>{t('Blog.title')}</h1>
 
-      {articles.filter(article => !article.node.frontmatter.disabled).map(({ node }) => (
-        <div key={node.fields.slug} className='item'>
-          <h3>
-            <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
-          </h3>
-          <ul>
-            <li>
-              <FontAwesomeIcon icon={faCalendarAlt} />
-              {node.frontmatter.date}
-            </li>
-            <li>
-              <FontAwesomeIcon icon={faTag} />
-              {node.frontmatter.tags.join(', ')}
-            </li>
-          </ul>
-        </div>
-      ))}
+      {articles
+        .filter(article => !article.node.frontmatter.disabled)
+        .map(({ node }) => (
+          <div key={node.fields.slug} className='item'>
+            <h3>
+              <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
+            </h3>
+            <ul>
+              <li>
+                <FontAwesomeIcon icon={faCalendarAlt} />
+                {node.frontmatter.date}
+              </li>
+              <li>
+                <FontAwesomeIcon icon={faTag} />
+                {node.frontmatter.tags.join(', ')}
+              </li>
+            </ul>
+          </div>
+        ))}
     </Layout>
   )
 }

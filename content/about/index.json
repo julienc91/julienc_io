@@ -6,9 +6,7 @@
       "url": "https://www.soonvibes.com/",
       "start_date": "2017-06",
       "end_date": "",
-      "skills": [
-        "python", "django", "react", "postgresql", "mongodb", "docker"
-      ]
+      "skills": ["python", "django", "react", "postgresql", "mongodb", "docker"]
     },
     {
       "id": "sewan_2",
@@ -16,9 +14,7 @@
       "url": "https://www.sewan.fr",
       "start_date": "2014-10",
       "end_date": "2017-05",
-      "skills": [
-        "python", "js", "php", "mysql"
-      ]
+      "skills": ["python", "js", "php", "mysql"]
     },
     {
       "id": "kdata",
@@ -27,9 +23,7 @@
       "url": "https://www.capitaldata.fr/",
       "start_date": "2014-02",
       "end_date": "2014-08",
-      "skills": [
-        "go", "mysql"
-      ]
+      "skills": ["go", "mysql"]
     },
     {
       "id": "sewan_1",
@@ -38,9 +32,7 @@
       "url": "https://www.sewan.fr",
       "start_date": "2013-06",
       "end_date": "2013-09",
-      "skills": [
-        "python", "js", "php", "mysql"
-      ]
+      "skills": ["python", "js", "php", "mysql"]
     }
   ],
   "projects": [
@@ -49,35 +41,27 @@
       "name": "LionSkins",
       "url": "https://lionskins.co/",
       "repository": "https://github.com/julienc91/lionskins",
-      "skills": [
-        "python", "flask", "graphql", "react", "docker"
-      ]
+      "skills": ["python", "flask", "graphql", "react", "docker"]
     },
     {
       "id": "ezshare",
       "name": "ezshare",
       "url": "https://ezshare.julienc.io",
       "repository": "https://github.com/julienc91/ezshare",
-      "skills": [
-        "react", "webrtc"
-      ]
+      "skills": ["react", "webrtc"]
     },
     {
       "id": "karlkmusic",
       "name": "Karlk Music",
       "url": "https://karlkmusic.vercel.app",
       "repository": "https://github.com/julienc91/karlkmusic",
-      "skills": [
-        "react"
-      ]
+      "skills": ["react"]
     },
     {
       "id": "multidl",
       "name": "Multidl",
       "repository": "https://github.com/julienc91/multidl",
-      "skills": [
-        "python"
-      ]
+      "skills": ["python"]
     }
   ],
   "education": [

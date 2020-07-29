@@ -2,7 +2,11 @@ import React from 'react'
 import { Trans, useTranslation } from 'react-i18next'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendarAlt } from '@fortawesome/free-regular-svg-icons'
-import { faCode, faExternalLinkAlt, faTag } from '@fortawesome/free-solid-svg-icons'
+import {
+  faCode,
+  faExternalLinkAlt,
+  faTag
+} from '@fortawesome/free-solid-svg-icons'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import data from '../../content/about/index.json'
@@ -21,7 +25,10 @@ const About = () => {
         {data.work.map(work => (
           <div key={work.id} className='item'>
             <h3>
-              {t('About.work.item_title', { title: t(`About.work.${work.id}.title`), company: work.company })}
+              {t('About.work.item_title', {
+                title: t(`About.work.${work.id}.title`),
+                company: work.company
+              })}
               {work.intern && ' ' + t('About.work.intern')}
             </h3>
             <ul>
@@ -111,15 +118,15 @@ const About = () => {
         <p>
           <Trans i18nKey='About.legals.content'>
             <a href='https://creativecommons.org/licenses/by/4.0/'>-</a>
-          </Trans>
-          {' '}
+          </Trans>{' '}
           <Trans i18nKey='About.legals.source'>
-            <a href='https://github.com/julienc91/julienc_iov2/blob/master/LICENSE'>-</a>
+            <a href='https://github.com/julienc91/julienc_iov2/blob/master/LICENSE'>
+              -
+            </a>
             <a href='https://github.com/julienc91/julienc_iov2'>-</a>
           </Trans>
         </p>
       </section>
-
     </Layout>
   )
 }
