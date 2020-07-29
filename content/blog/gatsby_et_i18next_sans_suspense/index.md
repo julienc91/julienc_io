@@ -7,7 +7,7 @@ tags: ['javascript', 'react', 'gatsby']
 [Gatsby](https://www.gatsbyjs.org/) est un framework JS très pratique pour créer des sites statiques rapidement avec React. C'est d'ailleurs le framework utilisé par la version actuelle de ce site.
 D'autre part, le package [i18next](https://www.i18next.com/) facilite l'internationalisation de ses sites et applications, et propose des adaptateurs pour les frameworks les plus courants, tels que React, NextJS, Vue ou Angular.
 
-Les problèmes arrivent lorsqu'on tente de combiner les deux... En effet, [Gatsby ne fonctionne pas avec `React.Suspense`](https://www.gatsbyjs.org/docs/using-client-side-only-packages/#workaround-4-use-reactlazy-and-suspense-on-client-side-only), du fait que cette fonctionnalité n'est, pour le moment, [pas implémentés pour le rendu côté serveur](https://fr.reactjs.org/docs/code-splitting.html#reactlazy). Ainsi, lorsqu'on tente un `gatsby build` sur un tel projet, on obtient l'erreur suivante&nbsp;:
+Les problèmes arrivent lorsqu'on tente de combiner les deux... En effet, [Gatsby ne fonctionne pas avec `React.Suspense`](https://www.gatsbyjs.org/docs/using-client-side-only-packages/#workaround-4-use-reactlazy-and-suspense-on-client-side-only), du fait que cette fonctionnalité n'est, pour le moment, [pas implémentée pour le rendu côté serveur](https://fr.reactjs.org/docs/code-splitting.html#reactlazy). Ainsi, lorsqu'on tente un `gatsby build` sur un tel projet, on obtient l'erreur suivante&nbsp;:
 
 ```
 $ gatsby build
@@ -91,7 +91,7 @@ const Layout = props => {
 }
 ```
 
-Et dans le fichier `i18n.js&nbsp;:
+Et dans le fichier `i18n.js`&nbsp;:
 
 ```javascript
 import i18n from 'i18next'
