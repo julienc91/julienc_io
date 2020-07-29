@@ -8,6 +8,7 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
+    useCookie: false,
     fallbackLng: 'fr',
     supportedLngs: ['fr'],
     interpolation: {
@@ -15,6 +16,9 @@ i18n
     },
     react: {
       useSuspense: false // gatsby doesn't work with suspense...
+    },
+    detection: {
+      lookupLocalStorage: false
     }
   })
 
