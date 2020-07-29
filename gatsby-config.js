@@ -30,7 +30,12 @@ module.exports = {
         name: 'assets'
       }
     },
-    'gatsby-transformer-remark',
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [`gatsby-remark-copy-linked-files`]
+      }
+    },
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
