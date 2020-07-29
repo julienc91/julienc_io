@@ -73,3 +73,19 @@
     }
   }
 }
+
+.article-content pre {
+  .token.keyword {
+    color: var(--color-emphasis);
+  }
+
+  .token.comment {
+    color: $lightblue;
+  }
+
+  .token.string,
+  .token.char,
+  .token.boolean {
+    color: $lightgreen;
+  }
+}
