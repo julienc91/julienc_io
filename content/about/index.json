@@ -1,6 +1,14 @@
 {
   "work": [
     {
+      "id": "gitguardian",
+      "company": "GitGuardian",
+      "url": "https://www.gitguardian.com",
+      "start_date": "2021-01",
+      "end_date": "",
+      "skills": ["python", "django", "react", "postgresql", "docker", "celery", "redis"]
+    },
+    {
       "id": "soonvibes",
       "company": "Soonvibes",
       "url": "https://www.soonvibes.com/",
