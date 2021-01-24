@@ -11,6 +11,10 @@
       "title": "Travail",
       "item_title": "{{title}} - {{company}}",
       "intern": "(stage)",
+      "gitguardian": {
+        "title": "Développeur Full Stack",
+        "description": ""
+      },
       "soonvibes": {
         "title": "Lead Developer",
         "description": "Responsable technique, maintenance et évolution de la plateforme web, conception d'API, rédaction des spécifications conjointement avec le responsable produit, supervision des développements internes et externes."
