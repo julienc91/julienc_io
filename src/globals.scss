@@ -6,14 +6,18 @@ $white: #fff;
 $lightblue: #4cc;
 $lightgreen: #4c4;
 
-$color-background: $white !default;
-$color-emphasis: $red !default;
-$color-text: $oil !default;
-
 :root {
-  --color-background: #{$color-background};
-  --color-emphasis: #{$color-emphasis};
-  --color-text: #{$color-text};
+  --color-background: #{$white};
+  --color-emphasis: #{$red};
+  --color-text: #{$oil};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #{$oil};
+    --color-emphasis: #{$red};
+    --color-text: #{$white};
+  }
 }
 
 @mixin color-transition {
