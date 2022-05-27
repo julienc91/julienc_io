@@ -34,6 +34,9 @@
     },
     "projects": {
       "title": "Réalisations",
+      "caviardeul": {
+        "description": "Un jeu où l'utilisateur doit deviner le titre d'une page Wikipédia obfusquée."
+      },
       "lionskins": {
         "description": "Comparateur de prix pour les <i>skins</i> du jeu «\u00A0Counter-Strike: Global Offensive\u00A0». Plus de 10\u00A0000 items y sont répertoriés et actualisés quotidiennement à partir des données de divers sites revendeurs."
       },

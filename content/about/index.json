@@ -45,11 +45,18 @@
   ],
   "projects": [
     {
+      "id": "caviardeul",
+      "name": "Caviardeul",
+      "url": "https://caviardeul.julienc.io",
+      "repository": "https://github.com/julienc91/caviardeul",
+      "skills": ["react", "typescript"]
+    },
+    {
       "id": "lionskins",
       "name": "LionSkins",
       "url": "https://lionskins.co/",
       "repository": "https://github.com/julienc91/lionskins",
-      "skills": ["python", "flask", "graphql", "react", "docker"]
+      "skills": ["python", "django", "graphql", "react", "nextjs", "docker"]
     },
     {
       "id": "ezshare",
