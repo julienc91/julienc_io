@@ -3,6 +3,8 @@
     {
       "id": "gitguardian",
       "company": "GitGuardian",
+      "title": "Senior Software Engineer",
+      "description": "",
       "url": "https://www.gitguardian.com",
       "start_date": "2021-01",
       "end_date": "",
@@ -11,6 +13,8 @@
     {
       "id": "soonvibes",
       "company": "Soonvibes",
+      "title": "Lead Developer",
+      "description": "Responsable technique, maintenance et évolution de la plateforme web, conception d'API, rédaction des spécifications conjointement avec le responsable produit, supervision des développements internes et externes.",
       "url": "https://www.soonvibes.com/",
       "start_date": "2017-06",
       "end_date": "2020-10",
@@ -19,6 +23,8 @@
     {
       "id": "sewan_2",
       "company": "Sewan",
+      "title": "Développeur Python",
+      "description": "Développeur backend, puis Lead Developer, spécialisé dans la branche facturation de l'application. Contraintes de haute disponibilité, de criticité des informations, et de traitement en quasi-temps réel.",
       "url": "https://www.sewan.fr",
       "start_date": "2014-10",
       "end_date": "2017-05",
@@ -27,6 +33,8 @@
     {
       "id": "kdata",
       "company": "CapitalData",
+      "title": "Développeur R&D",
+      "description": "Conception d'applications en Go pour le traitement générique de grands volumes de données émanant de divers clients.",
       "intern": true,
       "url": "https://www.capitaldata.fr/",
       "start_date": "2014-02",
@@ -36,6 +44,8 @@
     {
       "id": "sewan_1",
       "company": "Sewan",
+      "title": "Développeur full stack",
+      "description": "Développement et intégration à l'application web d'un système de commande et de gestions de noms de domaines.",
       "intern": true,
       "url": "https://www.sewan.fr",
       "start_date": "2013-06",
@@ -47,13 +57,15 @@
     {
       "id": "caviardeul",
       "name": "Caviardeul",
+      "description": "Un jeu où l'utilisateur doit deviner le titre d'une page Wikipédia obfusquée.",
       "url": "https://caviardeul.fr",
       "repository": "https://github.com/julienc91/caviardeul",
-      "skills": ["react", "typescript"]
+      "skills": ["react","typescript", "nextjs", "prismajs"]
     },
     {
       "id": "lionskins",
       "name": "LionSkins",
+      "description": "Comparateur de prix pour les <i>skins</i> du jeu «\u00A0Counter-Strike: Global Offensive\u00A0». Plus de 10\u00A0000 items y sont répertoriés et actualisés quotidiennement à partir des données de divers sites revendeurs.",
       "url": "https://lionskins.co/",
       "repository": "https://github.com/julienc91/lionskins",
       "skills": ["python", "django", "graphql", "react", "nextjs", "docker"]
@@ -61,6 +73,7 @@
     {
       "id": "ezshare",
       "name": "ezshare",
+      "description": "Outil de partage de fichiers en pair à pair avec la technologie WebRTC, mettant l'accent sur l'anonymat.",
       "url": "https://ezshare.julienc.io",
       "repository": "https://github.com/julienc91/ezshare",
       "skills": ["react", "webrtc"]
@@ -68,6 +81,7 @@
     {
       "id": "karlkmusic",
       "name": "Karlk Music",
+      "description": "Site vitrine de l'artiste Karlk.",
       "url": "https://www.karlkmusic.com",
       "repository": "https://github.com/julienc91/karlkmusic",
       "skills": ["react"]
@@ -75,6 +89,7 @@
     {
       "id": "multidl",
       "name": "Multidl",
+      "description": "Utilitaire en ligne de commande permettant le téléchargement en parallèle de plusieurs fichiers.",
       "repository": "https://github.com/julienc91/multidl",
       "skills": ["python"]
     }
@@ -83,18 +98,21 @@
     {
       "id": "enseirb",
       "name": "ENSEIRB-MATMECA",
+      "description": "Cycle d'ingénieur en informatique, en spécialisation réseaux et systèmes répartis.",
       "url": "https://enseirb-matmeca.bordeaux-inp.fr/",
       "date": "2011 - 2014"
     },
     {
       "id": "copenhagen",
       "name": "Copenhagen University College of Engineering",
+      "description": "Université d'été sur les thématiques de la théorie des jeux et des technologies de télémédecine.",
       "url": "https://www.dtu.dk/english",
       "date": "2012"
     },
     {
       "id": "cpge",
       "name": "CPGE MPSI/MP - Lycée Pothier",
+      "description": "Classe préparatoire aux grandes écoles, spécialisation maths, physique et sciences de l'ingénieur, et option informatique.",
       "url": "https://www.lycee-pothier.com/cpge/",
       "date": "2009-2011"
     }

@@ -1,24 +1,22 @@
-import React from 'react'
-import { useTranslation } from 'react-i18next'
-import { graphql, Link } from 'gatsby'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCalendarAlt } from '@fortawesome/free-regular-svg-icons'
-import { faTag } from '@fortawesome/free-solid-svg-icons'
-import Layout from '../components/layout'
-import SEO from '../components/seo'
-import './article.scss'
+import React from "react"
+import { graphql, Link } from "gatsby"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCalendarAlt } from "@fortawesome/free-regular-svg-icons"
+import { faTag } from "@fortawesome/free-solid-svg-icons"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import "./article.scss"
 
 const Article = ({ data }) => {
-  const { t } = useTranslation()
   const article = data.markdownRemark
   const otherArticles = data.allMarkdownRemark.edges
 
   return (
-    <Layout className='page article'>
+    <Layout className="page article">
       <SEO title={article.frontmatter.title} />
       <article>
-        <h1 className='page-title'>{article.frontmatter.title}</h1>
-        <ul className='metadata'>
+        <h1 className="page-title">{article.frontmatter.title}</h1>
+        <ul className="metadata">
           <ul>
             <li>
               <FontAwesomeIcon icon={faCalendarAlt} />
@@ -26,18 +24,18 @@ const Article = ({ data }) => {
             </li>
             <li>
               <FontAwesomeIcon icon={faTag} />
-              {article.frontmatter.tags.join(', ')}
+              {article.frontmatter.tags.join(", ")}
             </li>
           </ul>
         </ul>
 
         <div
-          className='article-content'
+          className="article-content"
           dangerouslySetInnerHTML={{ __html: article.html }}
         />
       </article>
-      <div className='article-others'>
-        <h3>{t('Article.read_other')}</h3>
+      <div className="article-others">
+        <h3>À lire ensuite</h3>
         <ul>
           {otherArticles.map(({ node }) => (
             <li key={node.fields.slug}>

@@ -1,19 +1,17 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import { useTranslation } from 'react-i18next'
-import './menu.scss'
+import React from "react"
+import { Link } from "gatsby"
+import "./menu.scss"
 
 const Menu = () => {
-  const { t } = useTranslation()
   return (
-    <nav className='menu'>
-      <div className='left-menu'>
-        <Link to='/'>{t('Menu.home')}</Link>
+    <nav className="menu">
+      <div className="left-menu">
+        <Link to="/">julienc.io</Link>
       </div>
-      <div className='right-menu'>
-        <Link to='/about'>{t('Menu.about')}</Link>
-        <Link to='/blog'>{t('Menu.blog')}</Link>
-        <Link to='/contact'>{t('Menu.contact')}</Link>
+      <div className="right-menu">
+        <Link to="/about">about</Link>
+        <Link to="/blog">blog</Link>
+        <Link to="/contact">contact</Link>
       </div>
     </nav>
   )

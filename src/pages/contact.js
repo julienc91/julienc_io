@@ -1,44 +1,53 @@
-import React from 'react'
-import { useTranslation } from 'react-i18next'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faGithub,
   faLinkedin,
-  faStackOverflow
-} from '@fortawesome/free-brands-svg-icons'
-import { faAt, faKey } from '@fortawesome/free-solid-svg-icons'
-import Layout from '../components/layout'
-import SEO from '../components/seo'
-import './contact.scss'
+  faMastodon,
+  faStackOverflow,
+} from "@fortawesome/free-brands-svg-icons"
+import { faAt, faKey } from "@fortawesome/free-solid-svg-icons"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import "./contact.scss"
 
 const Contact = () => {
-  const { t } = useTranslation()
   return (
-    <Layout className='page contact'>
-      <SEO title={t('Contact.title')} />
-      <h1 className='page-title'>{t('Contact.title')}</h1>
+    <Layout className="page contact">
+      <SEO title="Contact" />
+      <h1 className="page-title">Contact</h1>
       <ul>
         <li>
           <FontAwesomeIcon icon={faAt} />
-          <span className='email'>@</span>
+          <span className="email">@</span>
         </li>
         <li>
           <FontAwesomeIcon icon={faGithub} />
-          <a href='https://github.com/julienc91/'>julienc91</a>
+          <a rel="me" href="https://github.com/julienc91/">
+            julienc91
+          </a>
         </li>
         <li>
           <FontAwesomeIcon icon={faStackOverflow} />
-          <a href='https://stackoverflow.com/users/2679935/julienc'>julienc</a>
+          <a rel="me" href="https://stackoverflow.com/users/2679935/julienc">
+            julienc
+          </a>
         </li>
         <li>
           <FontAwesomeIcon icon={faLinkedin} />
-          <a href='https://www.linkedin.com/in/julien-chaumont/'>
+          <a rel="me" href="https://www.linkedin.com/in/julien-chaumont/">
             julien-chaumont
           </a>
         </li>
         <li>
+          <FontAwesomeIcon icon={faMastodon} />
+          <a rel="me" href="https://piaille.fr/@julien">
+            @julien@piaille.fr
+          </a>
+        </li>
+        <li>
           <FontAwesomeIcon icon={faKey} />
-          <a href='/julienc.asc'>EF4D 99AD B2A1 823C</a>
+          <a href="/julienc.asc">EF4D 99AD B2A1 823C</a>
         </li>
       </ul>
     </Layout>
