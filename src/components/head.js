@@ -24,7 +24,8 @@ export const Head = ({ location, data, ...props }) => {
     `
   )
 
-  const title = pageTitles[location.pathname] ?? data.markdownRemark.frontmatter.title
+  const title =
+    pageTitles[location.pathname] ?? data.markdownRemark.frontmatter.title
 
   const metaDescription = site.siteMetadata.description
   const fullTitle = `${title} | ${site.siteMetadata.title}`
