@@ -8,13 +8,11 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 import { faAt, faKey } from "@fortawesome/free-solid-svg-icons"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
 import "./contact.scss"
 
 const Contact = () => {
   return (
     <Layout className="page contact">
-      <SEO title="Contact" />
       <h1 className="page-title">Contact</h1>
       <ul>
         <li>
@@ -55,3 +53,5 @@ const Contact = () => {
 }
 
 export default Contact
+
+export { Head } from "../components/head"

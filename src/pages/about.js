@@ -7,14 +7,12 @@ import {
   faTag,
 } from "@fortawesome/free-solid-svg-icons"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
 import data from "../../content/about/index.json"
 import "./about.scss"
 
 const About = () => {
   return (
     <Layout className="page about">
-      <SEO title="À propos" />
       <h1 className="page-title">À propos</h1>
 
       <section>
@@ -122,3 +120,5 @@ const About = () => {
 }
 
 export default About
+
+export { Head } from "../components/head"

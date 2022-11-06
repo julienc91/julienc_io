@@ -4,14 +4,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCalendarAlt } from "@fortawesome/free-regular-svg-icons"
 import { faTag } from "@fortawesome/free-solid-svg-icons"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
 import "./blog.scss"
 
 const BlogIndex = ({ data }) => {
   const articles = data.allMarkdownRemark.edges
   return (
     <Layout className="page blog">
-      <SEO title="Blog" />
       <h1 className="page-title">Blog</h1>
 
       {articles
@@ -38,6 +36,8 @@ const BlogIndex = ({ data }) => {
 }
 
 export default BlogIndex
+
+export { Head } from "../components/head"
 
 export const pageQuery = graphql`
   query {

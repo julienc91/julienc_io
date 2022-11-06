@@ -1,12 +1,10 @@
 import React from "react"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
 import "./index.scss"
 
 const Index = () => {
   return (
     <Layout className="home">
-      <SEO title="~" />
       <header>
         <div>
           <h1>Julien Chaumont</h1>
@@ -21,3 +19,5 @@ const Index = () => {
 }
 
 export default Index
+
+export { Head } from "../components/head"

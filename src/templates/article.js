@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCalendarAlt } from "@fortawesome/free-regular-svg-icons"
 import { faTag } from "@fortawesome/free-solid-svg-icons"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
 import "./article.scss"
 
 const Article = ({ data }) => {
@@ -13,7 +12,6 @@ const Article = ({ data }) => {
 
   return (
     <Layout className="page article">
-      <SEO title={article.frontmatter.title} />
       <article>
         <h1 className="page-title">{article.frontmatter.title}</h1>
         <ul className="metadata">
@@ -49,6 +47,8 @@ const Article = ({ data }) => {
 }
 
 export default Article
+
+export { Head } from "../components/head"
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {

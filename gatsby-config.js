@@ -1,12 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: "Julien Chaumont - Développeur",
+    title: "Julien Chaumont - Software Engineer",
     author: {
       name: "Julien Chaumont",
     },
-    description: "Julien Chaumont - Développeur",
+    description: "Julien Chaumont - Software Engineer",
     siteUrl: "https://julienc.io",
   },
+  trailingSlash: "never",
   plugins: [
     "gatsby-plugin-sass",
     {
@@ -48,7 +49,6 @@ module.exports = {
         icon: "content/assets/logo512.png",
       },
     },
-    "gatsby-plugin-react-helmet",
     "gatsby-plugin-meta-redirect",
     "gatsby-plugin-sitemap",
   ],
