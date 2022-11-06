@@ -1,7 +1,7 @@
 ---
 title: Gatsby et i18next sans Suspense
-date: '2020-07-29'
-tags: ['javascript', 'react', 'gatsby']
+date: "2020-07-29"
+tags: ["javascript", "react", "gatsby"]
 ---
 
 [Gatsby](https://www.gatsbyjs.org/) est un framework JS très pratique pour créer des sites statiques rapidement avec React. C'est d'ailleurs le framework utilisé par la version actuelle de ce site.
@@ -31,24 +31,24 @@ Pas très parlant...
 Heureusement, il est très simple de configurer `i18next` pour ne pas utiliser `React.Suspense`. Dans le fichier `src/components/i18n.js` où se fait la configuration&nbsp;:
 
 ```javascript
-import i18n from 'i18next'
-import Backend from 'i18next-http-backend'
-import LanguageDetector from 'i18next-browser-languagedetector'
-import { initReactI18next } from 'react-i18next'
+import i18n from "i18next"
+import Backend from "i18next-http-backend"
+import LanguageDetector from "i18next-browser-languagedetector"
+import { initReactI18next } from "react-i18next"
 
 i18n
   .use(Backend)
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    fallbackLng: 'en',
-    supportedLngs: ['en', 'fr'],
+    fallbackLng: "en",
+    supportedLngs: ["en", "fr"],
     interpolation: {
-      escapeValue: false
+      escapeValue: false,
     },
     react: {
-      useSuspense: false // <- et voilà !
-    }
+      useSuspense: false, // <- et voilà !
+    },
   })
 
 export default i18n
@@ -67,11 +67,11 @@ Pour répondre à ce nouveau désagrément, il est possible d'utiliser un _callb
 Ainsi, dans le fichier `layout.js`&nbsp;:
 
 ```javascript
-import React, { useState } from 'react'
-import Footer from './footer'
-import Menu from './menu'
-import Spinner from './spinner'
-import { setCallback } from './i18n'
+import React, { useState } from "react"
+import Footer from "./footer"
+import Menu from "./menu"
+import Spinner from "./spinner"
+import { setCallback } from "./i18n"
 
 const Layout = props => {
   const { children, className } = props
@@ -94,10 +94,10 @@ const Layout = props => {
 Et dans le fichier `i18n.js`&nbsp;:
 
 ```javascript
-import i18n from 'i18next'
-import Backend from 'i18next-http-backend'
-import LanguageDetector from 'i18next-browser-languagedetector'
-import { initReactI18next } from 'react-i18next'
+import i18n from "i18next"
+import Backend from "i18next-http-backend"
+import LanguageDetector from "i18next-browser-languagedetector"
+import { initReactI18next } from "react-i18next"
 
 let ready
 let readyCallback
@@ -107,14 +107,14 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    fallbackLng: 'en',
-    supportedLngs: ['en', 'fr'],
+    fallbackLng: "en",
+    supportedLngs: ["en", "fr"],
     interpolation: {
-      escapeValue: false
+      escapeValue: false,
     },
     react: {
-      useSuspense: false
-    }
+      useSuspense: false,
+    },
   })
   .then(() => {
     ready = true

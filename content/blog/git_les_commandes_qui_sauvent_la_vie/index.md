@@ -1,7 +1,7 @@
 ---
 title: Git, les commandes qui sauvent la vie
-date: '2014-07-18'
-tags: ['git', 'shell']
+date: "2014-07-18"
+tags: ["git", "shell"]
 ---
 
 `git` est un outil puissant et complet, à tel point qu'il est aujourd'hui le gestionnaire de versions le plus utilisé. Mais il n'est pas toujours simple de se souvenir de _la_ commande qui répond à votre besoin du moment. Cet article recense une série de commandes `git` qu'il est bon de garder à portée de main.

@@ -1,7 +1,7 @@
 ---
 title: Des CLI en Python avec Fire
-date: '2020-07-15'
-tags: ['python', 'shell']
+date: "2020-07-15"
+tags: ["python", "shell"]
 ---
 
 Python est historiquement un langage très utilisé pour concevoir des applications en ligne de commande (ou _CLI_ pour l'acronyme anglais). Pendant longtemps, le module [`optparse`](https://docs.python.org/2/library/optparse.html) de la bibliothèque standard a permis aux développeur·euses de faciliter la conception de telles applications en offrant des outils pour gérer proprement les paramètres des programmes.

@@ -1,7 +1,7 @@
 ---
 title: Mettre à jour automatiquement ses images Docker
-date: '2017-05-21'
-tags: ['docker']
+date: "2017-05-21"
+tags: ["docker"]
 ---
 
 Garder son système et ses dépendances à jour est primordial pour la sécurité. Et ce n'est pas parce qu'une application est _conteneurisée_ qu'elle devrait échapper à cette règle.

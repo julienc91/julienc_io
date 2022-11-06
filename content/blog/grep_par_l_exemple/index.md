@@ -1,7 +1,7 @@
 ---
 title: Grep par l'exemple
-date: '2014-06-21'
-tags: ['shell']
+date: "2014-06-21"
+tags: ["shell"]
 ---
 
 `grep` est un outil incontournable dès lors qu'il est question d'utiliser son terminal. Pour autant, l'étendue de ses fonctionnalités fait que beaucoup d'entre elles sont méconnues. Cet article a pour but de montrer, au travers d'exemples, certaines des possibilités offertes par `grep`.

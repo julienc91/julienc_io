@@ -1,7 +1,7 @@
 ---
 title: Come to the Dark Side, we have Markdown
-date: '2014-09-19'
-tags: ['markdown']
+date: "2014-09-19"
+tags: ["markdown"]
 disabled: true
 ---
 

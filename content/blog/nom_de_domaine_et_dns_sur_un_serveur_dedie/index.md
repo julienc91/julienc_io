@@ -1,7 +1,7 @@
 ---
 title: Nom de domaine et DNS sur un serveur dédié
-date: '2014-07-05'
-tags: ['devops']
+date: "2014-07-05"
+tags: ["devops"]
 disabled: true
 ---
 

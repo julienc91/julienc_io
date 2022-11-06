@@ -1,7 +1,7 @@
 ---
 title: Structural Pattern Matching sur Python 3.10
-date: '2021-03-02'
-tags: ['python']
+date: "2021-03-02"
+tags: ["python"]
 ---
 
 Le _Structural Pattern Matching_ est une nouveauté très intéressante à venir dans Python 3.10, dont la date de sortie prévisionnelle est octobre 2021. Mais pas la peine d'attendre jusque là pour tester, puisque cette fonctionnalité et d'ores et déjà disponible sur la version 3.10.0a6 !
