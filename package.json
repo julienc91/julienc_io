@@ -28,6 +28,13 @@
     "typeface-lato": "^1.1.13",
     "typeface-source-code-pro": "^1.1.13"
   },
+  "overrides": {
+    "gatsby": {
+      "body-parser": "^1.20.3",
+      "path-to-regexp": "^0.1.10",
+      "webpack-dev-middleware": "^5.3.4"
+    }
+  },
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
