@@ -23,7 +23,7 @@
     "prop-types": "^15.8.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "react-markdown": "^9.0.0",
+    "react-markdown": "^10.0.0",
     "sass": "^1.52.1",
     "typeface-lato": "^1.1.13",
     "typeface-source-code-pro": "^1.1.13"
