@@ -30,7 +30,7 @@
   },
   "overrides": {
     "gatsby": {
-      "body-parser": "^1.20.3",
+      "body-parser": "^2.0.0",
       "path-to-regexp": "^8.0.0",
       "webpack-dev-middleware": "^7.0.0"
     }
