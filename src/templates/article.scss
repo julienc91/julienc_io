@@ -1,4 +1,4 @@
-@import '../globals';
+@use '../globals' as g;
 
 .article {
   display: flex;
@@ -36,7 +36,7 @@
     }
 
     pre {
-      @include color-transition;
+      @include g.color-transition;
 
       background: var(--color-text);
       color: var(--color-background);
@@ -80,12 +80,12 @@
   }
 
   .token.comment {
-    color: $lightblue;
+    color: g.$lightblue;
   }
 
   .token.string,
   .token.char,
   .token.boolean {
-    color: $lightgreen;
+    color: g.$lightgreen;
   }
 }

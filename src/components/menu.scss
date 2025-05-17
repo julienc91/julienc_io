@@ -1,7 +1,7 @@
-@import '../globals';
+@use '../globals' as g;
 
 .menu {
-  @include color-transition;
+  @include g.color-transition;
 
   align-items: center;
   background-color: var(--color-background);

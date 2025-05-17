@@ -1,4 +1,4 @@
-@import '../globals';
+@use '../globals' as g;
 
 html,
 body {
@@ -8,7 +8,7 @@ body {
 }
 
 body {
-  @include color-transition;
+  @include g.color-transition;
 
   background-color: var(--color-background);
   color: var(--color-text);
@@ -43,7 +43,7 @@ a,
 a:hover,
 a:focus,
 a:visited {
-  @include color-transition;
+  @include g.color-transition;
 
   color: var(--color-text);
   text-decoration: none;

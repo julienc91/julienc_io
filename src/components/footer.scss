@@ -1,4 +1,4 @@
-@import '../globals';
+@use '../globals' as g;
 
 footer {
   bottom: 10px;
@@ -8,7 +8,7 @@ footer {
   right: 10px;
 
   .switch {
-    @include color-transition;
+    @include g.color-transition;
 
     align-items: center;
     background: var(--color-text);
