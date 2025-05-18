@@ -8,7 +8,7 @@ import { faCalendarAlt } from "@fortawesome/free-regular-svg-icons";
 import { faTag } from "@fortawesome/free-solid-svg-icons";
 
 // Import styles
-import '../../templates/article.scss';
+import './_article.scss';
 
 export async function getStaticPaths() {
   const articleModules = import.meta.glob("../../../content/blog/**/*.md");

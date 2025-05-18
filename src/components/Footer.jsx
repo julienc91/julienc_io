@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLightbulb } from "@fortawesome/free-regular-svg-icons";
-import "./footer.scss";
+import "./_footer.scss";
 
 const Footer = () => {
   const [colors, setColors] = useState({
