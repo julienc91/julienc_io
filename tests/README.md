@@ -77,4 +77,13 @@ After running the tests, Playwright generates an HTML report in the `playwright-
 
 ## Continuous Integration
 
-These tests can be integrated into a CI/CD pipeline. The configuration is set up to handle CI environments with the `process.env.CI` variable.
+These tests are integrated into the project's CI/CD pipeline using GitHub Actions. The workflow:
+
+1. Builds the project
+2. Starts the preview server
+3. Runs the Playwright tests against the built site
+4. Uploads the test report as an artifact
+
+In the CI environment, only the Chromium tests are run to save time. The configuration is set up to handle CI environments with the `process.env.CI` variable, which adjusts settings like retries and parallelism.
+
+You can view the workflow configuration in [.github/workflows/ci.yml](../.github/workflows/ci.yml).
