@@ -11,7 +11,16 @@ import { faTag } from "@fortawesome/free-solid-svg-icons";
 import '../../templates/article.scss';
 
 export async function getStaticPaths() {
-  const articles = await Astro.glob("../../../content/blog/**/*.md");
+  const articleModules = import.meta.glob("../../../content/blog/**/*.md");
+
+  // Convert the modules object to an array of articles
+  const articles = await Promise.all(
+    Object.entries(articleModules).map(async ([path, importModule]) => {
+      const module = await importModule();
+      return { ...module, file: path };
+    })
+  );
+
   return articles.map(article => ({
     params: { slug: article.file.split("/").slice(-2)[0] },
     props: { article },
@@ -23,7 +32,15 @@ const { slug } = Astro.params;
 const { article } = Astro.props;
 
 // Fetch all markdown files
-const articles = await Astro.glob('../../../content/blog/**/*.md');
+const articleModules = import.meta.glob('../../../content/blog/**/*.md');
+
+// Convert the modules object to an array of articles
+const articles = await Promise.all(
+  Object.entries(articleModules).map(async ([path, importModule]) => {
+    const module = await importModule();
+    return { ...module, file: path };
+  })
+);
 
 // Find other articles for the "read next" section
 const otherArticles = articles

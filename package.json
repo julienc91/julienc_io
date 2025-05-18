@@ -4,27 +4,27 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.1.1",
-    "@fortawesome/free-brands-svg-icons": "^6.1.1",
-    "@fortawesome/free-regular-svg-icons": "^6.1.1",
-    "@fortawesome/free-solid-svg-icons": "^6.1.1",
-    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-regular-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "eslint": "^9.2.0",
     "postcss": "^8.4.31",
     "prismjs": "^1.30.0",
     "prop-types": "^15.8.1",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
     "react-markdown": "^10.0.0",
-    "sass": "^1.52.1",
+    "sass": "^1.69.5",
     "typeface-lato": "^1.1.13",
     "typeface-source-code-pro": "^1.1.13"
   },
   "devDependencies": {
-    "astro": "^4.0.0",
-    "@astrojs/react": "^3.0.0",
+    "astro": "^5.7.13",
+    "@astrojs/react": "^4.2.7",
     "@astrojs/sitemap": "^3.0.0",
-    "astro-icon": "^0.8.1"
+    "astro-icon": "^1.1.5"
   },
   "scripts": {
     "dev": "astro dev",

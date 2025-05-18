@@ -10,8 +10,16 @@ import { faTag } from "@fortawesome/free-solid-svg-icons";
 // Import styles
 import './blog.scss';
 
-// In Astro, we can use the Astro.glob() function to fetch markdown files
-const articles = await Astro.glob('../../content/blog/**/*.md');
+// Use import.meta.glob to fetch markdown files
+const articleModules = import.meta.glob('../../content/blog/**/*.md');
+
+// Convert the modules object to an array of articles
+const articles = await Promise.all(
+  Object.entries(articleModules).map(async ([path, importModule]) => {
+    const module = await importModule();
+    return { ...module, file: path };
+  })
+);
 
 // Sort articles by date in descending order
 const sortedArticles = articles

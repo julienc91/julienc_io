@@ -17,7 +17,7 @@ export default defineConfig({
       preprocessorOptions: {
         scss: {
           // If you have global imports, you can add them here
-          // additionalData: `@import "./src/globals.scss";`,
+          // additionalData: `@use "./src/globals.scss" as g;`,
         },
       },
     },
