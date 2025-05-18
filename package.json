@@ -2,6 +2,7 @@
   "name": "julienc.io",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
@@ -9,15 +10,6 @@
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "eslint": "^9.2.0",
-    "gatsby": "^5.12.6",
-    "gatsby-plugin-manifest": "^5.12.1",
-    "gatsby-plugin-meta-redirect": "^1.1.1",
-    "gatsby-plugin-sass": "^6.12.1",
-    "gatsby-plugin-sitemap": "^6.12.0",
-    "gatsby-remark-copy-linked-files": "^6.12.0",
-    "gatsby-remark-prismjs": "^7.12.0",
-    "gatsby-source-filesystem": "^5.12.0",
-    "gatsby-transformer-remark": "^6.12.1",
     "postcss": "^8.4.31",
     "prismjs": "^1.30.0",
     "prop-types": "^15.8.1",
@@ -28,20 +20,18 @@
     "typeface-lato": "^1.1.13",
     "typeface-source-code-pro": "^1.1.13"
   },
-  "overrides": {
-    "gatsby": {
-      "body-parser": "^2.0.0",
-      "path-to-regexp": "^8.0.0",
-      "webpack-dev-middleware": "^7.0.0"
-    }
+  "devDependencies": {
+    "astro": "^4.0.0",
+    "@astrojs/react": "^3.0.0",
+    "@astrojs/sitemap": "^3.0.0",
+    "astro-icon": "^0.8.1"
   },
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
     "format": "prettier-standard --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "yarn develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://astro.build/testing\" && exit 1"
   }
 }

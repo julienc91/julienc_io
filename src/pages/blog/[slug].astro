@@ -1,0 +1,76 @@
+---
+// Import layout
+import Layout from '../../layouts/Layout.astro';
+
+// Import components
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCalendarAlt } from "@fortawesome/free-regular-svg-icons";
+import { faTag } from "@fortawesome/free-solid-svg-icons";
+
+// Import styles
+import '../../templates/article.scss';
+
+export async function getStaticPaths() {
+  const articles = await Astro.glob("../../../content/blog/**/*.md");
+  return articles.map(article => ({
+    params: { slug: article.file.split("/").slice(-2)[0] },
+    props: { article },
+  }));
+}
+
+// Get the slug from the URL
+const { slug } = Astro.params;
+const { article } = Astro.props;
+
+// Fetch all markdown files
+const articles = await Astro.glob('../../../content/blog/**/*.md');
+
+// Find other articles for the "read next" section
+const otherArticles = articles
+  .filter(a => {
+    const articleSlug = a.file.split('/').slice(-2)[0];
+    return articleSlug !== slug && !a.frontmatter.disabled;
+  })
+  .sort((a, b) => {
+    return new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime();
+  })
+  .slice(0, 5);
+
+// Format date
+const formattedDate = new Date(article.frontmatter.date).toISOString().split('T')[0];
+---
+
+<Layout title={article.frontmatter.title}>
+  <div class="article">
+    <article>
+      <h1 class="page-title">{article.frontmatter.title}</h1>
+      <ul class="metadata">
+        <ul>
+          <li>
+            <FontAwesomeIcon icon={faCalendarAlt} />
+            {formattedDate}
+          </li>
+          <li>
+            <FontAwesomeIcon icon={faTag} />
+            {article.frontmatter.tags.join(", ")}
+          </li>
+        </ul>
+      </ul>
+
+      <div class="article-content">
+        <article.Content />
+      </div>
+    </article>
+    <div class="article-others">
+      <h3>À lire ensuite</h3>
+      <ul>
+        {otherArticles.map(({ frontmatter, file }) => {
+          const otherSlug = file.split('/').slice(-2)[0];
+          return (
+            <li><a href={`/blog/${otherSlug}`}>{frontmatter.title}</a></li>
+          );
+        })}
+      </ul>
+    </div>
+  </div>
+</Layout>

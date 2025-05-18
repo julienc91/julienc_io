@@ -4,7 +4,6 @@ html,
 body {
   height: 100%;
   margin: 0;
-  padding: 0;
 }
 
 body {
@@ -19,11 +18,7 @@ body {
   min-height: 400px;
   min-width: 300px;
 
-  #___gatsby {
-    height: 100%;
-  }
-
-  #gatsby-focus-wrapper {
+  .content-wrapper {
     height: calc(100% - 20px);
     padding: 10px;
   }

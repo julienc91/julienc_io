@@ -1,0 +1,68 @@
+---
+// Import styles
+import '../components/layout.scss';
+
+// Import fonts
+import 'typeface-lato';
+import 'typeface-source-code-pro';
+
+// Import components
+import Menu from '../components/Menu.astro';
+import Footer from '../components/Footer.jsx';
+
+// Define props
+interface Props {
+  title: string;
+  description?: string;
+  className?: string;
+}
+
+// Get props with defaults
+const {
+  title,
+  description = "Julien Chaumont - Software Engineer",
+  className = "page"
+} = Astro.props;
+
+// Construct full title
+const fullTitle = `${title} | Julien Chaumont - Software Engineer`;
+const imageUrl = "https://julienc.io/logo.png";
+const pageUrl = `https://julienc.io${Astro.url.pathname}`;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png" />
+    <link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png" />
+    <link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png" />
+    <link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png" />
+    <meta name="theme-color" content="#111111" />
+    <title>{fullTitle}</title>
+    <meta name="author" content="Julien Chaumont" />
+    <meta name="description" content={description} />
+
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:site_name" content="julienc.io" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content={imageUrl} />
+    <meta property="og:url" content={pageUrl} />
+  </head>
+  <body>
+    <div class="content-wrapper">
+      <Menu />
+      <main class={`page ${className}`}>
+        <slot />
+      </main>
+      <Footer client:load />
+    </div>
+  </body>
+</html>

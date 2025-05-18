@@ -1,0 +1,46 @@
+---
+// Import layout
+import Layout from '../layouts/Layout.astro';
+
+// Import components
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCalendarAlt } from "@fortawesome/free-regular-svg-icons";
+import { faTag } from "@fortawesome/free-solid-svg-icons";
+
+// Import styles
+import './blog.scss';
+
+// In Astro, we can use the Astro.glob() function to fetch markdown files
+const articles = await Astro.glob('../../content/blog/**/*.md');
+
+// Sort articles by date in descending order
+const sortedArticles = articles
+  .filter(article => !article.frontmatter.disabled)
+  .sort((a, b) => {
+    return new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime();
+  });
+---
+
+<Layout title="Blog" className="blog">
+  <h1 class="page-title">Blog</h1>
+
+  {sortedArticles.map(article => (
+    <div class="item">
+      <h3>
+        <a href={`/blog/${article.file.split('/').slice(-2)[0]}`}>
+          {article.frontmatter.title}
+        </a>
+      </h3>
+      <ul>
+        <li>
+          <FontAwesomeIcon icon={faCalendarAlt} />
+          {new Date(article.frontmatter.date).toISOString().split('T')[0]}
+        </li>
+        <li>
+          <FontAwesomeIcon icon={faTag} />
+          {article.frontmatter.tags.join(", ")}
+        </li>
+      </ul>
+    </div>
+  ))}
+</Layout>
