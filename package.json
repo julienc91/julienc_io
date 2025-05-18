@@ -21,9 +21,10 @@
     "typeface-source-code-pro": "^1.1.13"
   },
   "devDependencies": {
-    "astro": "^5.7.13",
     "@astrojs/react": "^4.2.7",
     "@astrojs/sitemap": "^3.0.0",
+    "@playwright/test": "^1.52.0",
+    "astro": "^5.7.13",
     "astro-icon": "^1.1.5"
   },
   "scripts": {
@@ -32,6 +33,11 @@
     "build": "astro build",
     "preview": "astro preview",
     "format": "prettier-standard --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "test": "echo \"Write tests! -> https://astro.build/testing\" && exit 1"
+    "test": "playwright test",
+    "test:chromium": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
+    "test:debug": "playwright test --debug",
+    "test:ui": "playwright test --ui"
   }
 }
