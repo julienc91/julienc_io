@@ -23,10 +23,10 @@
   resolved "https://registry.yarnpkg.com/@antfu/utils/-/utils-8.1.1.tgz#95b1947d292a9a2efffba2081796dcaa05ecedfb"
   integrity sha512-Mex9nXf9vR6AhcXmMrlz/HVgYYZpVGJ6YlPgwl7UnaFpnshXs6EK/oa5Gpf3CzENMjkvEx2tQtntGnb7UtSTOQ==
 
-"@astrojs/compiler@^2.12.0":
-  version "2.12.0"
-  resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-2.12.0.tgz#36fa2b6a5214763a995775699b4d18f63de42de6"
-  integrity sha512-7bCjW6tVDpUurQLeKBUN9tZ5kSv5qYrGmcn0sG0IwacL7isR2ZbyyA3AdZ4uxsuUFOS2SlgReTH7wkxO6zpqWA==
+"@astrojs/compiler@^2.12.1":
+  version "2.12.1"
+  resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-2.12.1.tgz#5939988a6961b222f89562863b6b3dff00fa9ae9"
+  integrity sha512-WDSyVIiz7sNcJcCJxJFITu6XjfGhJ50Z0auyaWsrM+xb07IlhBLFtQuDkNy0caVHWNcKTM2LISAaHhgkRqGAVg==
 
 "@astrojs/internal-helpers@0.6.1":
   version "0.6.1"
@@ -1254,11 +1254,11 @@ astro-icon@^1.1.5:
     "@iconify/utils" "^2.1.30"
 
 astro@^5.7.13:
-  version "5.9.0"
-  resolved "https://registry.yarnpkg.com/astro/-/astro-5.9.0.tgz#33ba0c3ed0f16ff291472942451816ab70831cec"
-  integrity sha512-AHF7oZDBQRwggHUG0bwBhRQjrDD+vJpCtPd0/GVxDB1hGRV0SQuFWS0UHX5bYczIqFcao1z9o9o0r2rQtHrTMg==
+  version "5.9.1"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-5.9.1.tgz#8fa74fadac97f149a15a59ea7e8a74faf5174a2c"
+  integrity sha512-wxoJcTbuDZNFSv6EaL0PAlrp0Wx6VnOAULCXvy0scsV70oWMeUkdxuBxfO54JxO5Qgyvwj9h99y6E0elqOpGtA==
   dependencies:
-    "@astrojs/compiler" "^2.12.0"
+    "@astrojs/compiler" "^2.12.1"
     "@astrojs/internal-helpers" "0.6.1"
     "@astrojs/markdown-remark" "6.3.2"
     "@astrojs/telemetry" "3.3.0"
