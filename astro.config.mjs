@@ -21,6 +21,14 @@ export default defineConfig({
         },
       },
     },
+    // Workaround for Font Awesome v7 + react-fontawesome v3 importing package.json in ESM.
+    // Force bundling these packages during SSR so JSON imports are transformed by Vite.
+    // https://github.com/FortAwesome/react-fontawesome/issues/589
+    ssr: {
+      noExternal: [
+        '@fortawesome/react-fontawesome'
+      ],
+    },
   },
   // Configure markdown support
   markdown: {
