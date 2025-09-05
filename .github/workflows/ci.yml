@@ -18,15 +18,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
-          cache: 'yarn'
+          cache: 'npm'
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: npm ci
 
       - name: Build project
         # Redirect stderr to stdout and capture output to check for warnings
         run: |
-          BUILD_OUTPUT=$(yarn build 2>&1)
+          BUILD_OUTPUT=$(npm run build --silent 2>&1)
           echo "$BUILD_OUTPUT"
           if echo "$BUILD_OUTPUT" | grep -i "warning\|error"; then
             echo "Build contains warnings or errors"

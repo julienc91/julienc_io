@@ -17,7 +17,7 @@ The tests are organized by page:
 Before running the tests, make sure you have installed the dependencies:
 
 ```bash
-yarn install
+npm ci
 ```
 
 ### Install Playwright Browsers
@@ -33,7 +33,7 @@ npx playwright install
 To run all tests in all configured browsers (Chromium, Firefox, WebKit, and mobile browsers):
 
 ```bash
-yarn test
+npm test
 ```
 
 ### Running Tests in a Specific Browser
@@ -41,9 +41,9 @@ yarn test
 To run tests only in a specific browser:
 
 ```bash
-yarn test:chromium
-yarn test:firefox
-yarn test:webkit
+npm run test:chromium
+npm run test:firefox
+npm run test:webkit
 ```
 
 ### Running Tests in Debug Mode
@@ -51,7 +51,7 @@ yarn test:webkit
 To run tests in debug mode, which allows you to step through the tests:
 
 ```bash
-yarn test:debug
+npm run test:debug
 ```
 
 ### Running Tests with UI
@@ -59,7 +59,7 @@ yarn test:debug
 To run tests with the Playwright UI, which provides a visual interface for test execution:
 
 ```bash
-yarn test:ui
+npm run test:ui
 ```
 
 ## Configuration

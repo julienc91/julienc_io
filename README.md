@@ -7,18 +7,18 @@ Personal website built with [Astro](https://astro.build/).
 ### Prerequisites
 
 - Node.js (see .nvmrc for version)
-- Yarn
+- npm
 
 ### Installation
 
 ```bash
-yarn install
+npm ci
 ```
 
 ### Development Server
 
 ```bash
-yarn dev
+npm run dev
 ```
 
 This will start a development server at http://localhost:4321.
@@ -26,7 +26,7 @@ This will start a development server at http://localhost:4321.
 ### Build
 
 ```bash
-yarn build
+npm run build
 ```
 
 This will generate a production build in the `dist` directory.
@@ -34,7 +34,7 @@ This will generate a production build in the `dist` directory.
 ### Preview
 
 ```bash
-yarn preview
+npm run preview
 ```
 
 This will serve the production build locally for preview.
@@ -47,18 +47,18 @@ This project uses [Playwright](https://playwright.dev/) for end-to-end testing. 
 
 ```bash
 # Run all tests
-yarn test
+npm test
 
 # Run tests in a specific browser
-yarn test:chromium
-yarn test:firefox
-yarn test:webkit
+npm run test:chromium
+npm run test:firefox
+npm run test:webkit
 
 # Run tests in debug mode
-yarn test:debug
+npm run test:debug
 
 # Run tests with UI
-yarn test:ui
+npm run test:ui
 ```
 
 ## Continuous Integration
