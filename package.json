@@ -21,10 +21,10 @@
     "typeface-source-code-pro": "^1.1.13"
   },
   "devDependencies": {
-    "@astrojs/react": "^4.2.7",
+    "@astrojs/react": "^5.0.0",
     "@astrojs/sitemap": "^3.0.0",
     "@playwright/test": "^1.52.0",
-    "astro": "^5.7.13",
+    "astro": "^6.0.0",
     "astro-icon": "^1.1.5"
   },
   "scripts": {
