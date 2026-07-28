@@ -8,8 +8,7 @@
     "@fortawesome/free-brands-svg-icons": "^7.0.0",
     "@fortawesome/free-regular-svg-icons": "^7.0.0",
     "@fortawesome/free-solid-svg-icons": "^7.0.0",
-    "@fortawesome/react-fontawesome": "^3.0.0",
-    "eslint": "^10.0.0",
+    "@fortawesome/react-fontawesome": "^3.5.0",
     "postcss": "^8.4.31",
     "prismjs": "^1.30.0",
     "prop-types": "^15.8.1",
@@ -21,11 +20,10 @@
     "typeface-source-code-pro": "^1.1.13"
   },
   "devDependencies": {
-    "@astrojs/react": "^4.2.7",
-    "@astrojs/sitemap": "^3.0.0",
+    "@astrojs/react": "^6.0.2",
+    "@astrojs/sitemap": "^3.7.3",
     "@playwright/test": "^1.52.0",
-    "astro": "^5.7.13",
-    "astro-icon": "^1.1.5"
+    "astro": "^7.1.5"
   },
   "scripts": {
     "dev": "astro dev",

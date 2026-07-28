@@ -5,6 +5,10 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://julienc.io',
+  // Astro 7 changed the default to 'jsx', which strips the whitespace between
+  // adjacent inline elements (e.g. between an icon and its label). Keep the
+  // pre-v7 HTML-aware compression so rendered spacing is unchanged.
+  compressHTML: true,
   integrations: [
     // Enable React for interactive components
     react(),
@@ -20,14 +24,6 @@ export default defineConfig({
           // additionalData: `@use "./src/globals.scss" as g;`,
         },
       },
-    },
-    // Workaround for Font Awesome v7 + react-fontawesome v3 importing package.json in ESM.
-    // Force bundling these packages during SSR so JSON imports are transformed by Vite.
-    // https://github.com/FortAwesome/react-fontawesome/issues/589
-    ssr: {
-      noExternal: [
-        '@fortawesome/react-fontawesome'
-      ],
     },
   },
   // Configure markdown support
