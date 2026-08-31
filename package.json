@@ -4,26 +4,26 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^7.0.0",
-    "@fortawesome/free-brands-svg-icons": "^7.0.0",
-    "@fortawesome/free-regular-svg-icons": "^7.0.0",
-    "@fortawesome/free-solid-svg-icons": "^7.0.0",
+    "@fortawesome/fontawesome-svg-core": "^7.3.1",
+    "@fortawesome/free-brands-svg-icons": "^7.3.1",
+    "@fortawesome/free-regular-svg-icons": "^7.3.1",
+    "@fortawesome/free-solid-svg-icons": "^7.3.1",
     "@fortawesome/react-fontawesome": "^3.5.0",
-    "postcss": "^8.4.31",
+    "postcss": "^8.5.26",
     "prismjs": "^1.30.0",
     "prop-types": "^15.8.1",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
     "react-markdown": "^10.0.0",
-    "sass": "^1.69.5",
+    "sass": "^1.103.1",
     "typeface-lato": "^1.1.13",
     "typeface-source-code-pro": "^1.1.13"
   },
   "devDependencies": {
-    "@astrojs/react": "^6.0.2",
+    "@astrojs/react": "^6.0.4",
     "@astrojs/sitemap": "^3.7.3",
-    "@playwright/test": "^1.52.0",
-    "astro": "^7.1.5"
+    "@playwright/test": "^1.62.1",
+    "astro": "^7.2.4"
   },
   "scripts": {
     "dev": "astro dev",
