@@ -20,11 +20,13 @@
     "typeface-source-code-pro": "^1.1.13"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.10",
     "@astrojs/react": "^6.0.5",
     "@astrojs/sitemap": "^3.7.4",
     "@playwright/test": "^1.62.1",
     "astro": "^7.2.10",
-    "prettier": "^3.9.6"
+    "prettier": "^3.9.6",
+    "typescript": "^6.0.3"
   },
   "scripts": {
     "dev": "astro dev",
@@ -32,6 +34,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "type-check": "astro check",
     "test": "playwright test",
     "test:chromium": "playwright test --project=chromium",
     "test:firefox": "playwright test --project=firefox",
