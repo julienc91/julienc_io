@@ -29,6 +29,32 @@ updates:
           - "patch"
 
   # ---------------------------------------------------------------------------
+  # pre-commit hooks (.pre-commit-config.yaml)
+  # ---------------------------------------------------------------------------
+  - package-ecosystem: "pre-commit"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "07:00"
+      timezone: "Europe/Paris"
+    cooldown:
+      default-days: 7
+    open-pull-requests-limit: 4
+    labels:
+      - "dependencies"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    groups:
+      pre-commit:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
+
+  # ---------------------------------------------------------------------------
   # GitHub Actions (.github/workflows/*)
   # ---------------------------------------------------------------------------
   - package-ecosystem: "github-actions"

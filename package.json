@@ -23,14 +23,15 @@
     "@astrojs/react": "^6.0.5",
     "@astrojs/sitemap": "^3.7.4",
     "@playwright/test": "^1.62.1",
-    "astro": "^7.2.10"
+    "astro": "^7.2.10",
+    "prettier": "^3.9.6"
   },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "format": "prettier-standard --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "test": "playwright test",
     "test:chromium": "playwright test --project=chromium",
     "test:firefox": "playwright test --project=firefox",
