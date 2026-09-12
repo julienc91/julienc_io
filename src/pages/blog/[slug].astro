@@ -10,8 +10,19 @@ import { faTag } from "@fortawesome/free-solid-svg-icons";
 // Import styles
 import './_article.scss';
 
+import type { MarkdownInstance } from 'astro';
+
+interface ArticleFrontmatter {
+  title: string;
+  date: string;
+  tags: string[];
+  disabled?: boolean;
+}
+
 export async function getStaticPaths() {
-  const articleModules = import.meta.glob("../../../content/blog/**/*.md");
+  const articleModules = import.meta.glob<MarkdownInstance<ArticleFrontmatter>>(
+    "../../../content/blog/**/*.md"
+  );
 
   // Convert the modules object to an array of articles
   const articles = await Promise.all(
@@ -32,7 +43,9 @@ const { slug } = Astro.params;
 const { article } = Astro.props;
 
 // Fetch all markdown files
-const articleModules = import.meta.glob('../../../content/blog/**/*.md');
+const articleModules = import.meta.glob<MarkdownInstance<ArticleFrontmatter>>(
+  '../../../content/blog/**/*.md'
+);
 
 // Convert the modules object to an array of articles
 const articles = await Promise.all(

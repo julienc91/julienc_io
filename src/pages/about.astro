@@ -25,7 +25,7 @@ import './_about.scss';
     <h2>Travail</h2>
 
     {data.work.map(work => (
-      <div key={work.id} class="item">
+      <div class="item">
         <h3>
           {work.title} - {work.company}
           {work.intern && " (stage)"}
@@ -55,7 +55,7 @@ import './_about.scss';
     <h2>Réalisations</h2>
 
     {data.projects.map(project => (
-      <div key={project.id} class="item">
+      <div class="item">
         <h3>{project.name}</h3>
         <ul>
           {project.url && (
@@ -84,7 +84,7 @@ import './_about.scss';
     <h2>Formation</h2>
 
     {data.education.map(education => (
-      <div key={education.id} class="item">
+      <div class="item">
         <h3>{education.name}</h3>
         <ul>
           <li>
