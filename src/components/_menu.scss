@@ -1,4 +1,4 @@
-@use '../globals' as g;
+@use "../globals" as g;
 
 .menu {
   @include g.color-transition;
@@ -29,7 +29,7 @@
 
     a::before {
       color: var(--color-emphasis);
-      content: '/';
+      content: "/";
       font-weight: 700;
     }
   }
@@ -37,7 +37,7 @@
   .left-menu {
     a::after {
       color: var(--color-emphasis);
-      content: '/';
+      content: "/";
       font-weight: 700;
     }
   }

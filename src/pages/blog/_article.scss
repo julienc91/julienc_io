@@ -1,4 +1,4 @@
-@use '../../globals' as g;
+@use "../../globals" as g;
 
 .article {
   display: flex;
@@ -69,7 +69,7 @@
 
     li::before {
       color: var(--color-emphasis);
-      content: '../';
+      content: "../";
     }
   }
 }

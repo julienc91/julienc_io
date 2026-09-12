@@ -38,7 +38,7 @@ export const middleware = async (req: NextRequest, event: NextFetchEvent) => {
   ) {
     return NextResponse.redirect(
       new URL(`${BASE_URL}${req.nextUrl.pathname}`),
-      308
+      308,
     )
   }
   return NextResponse.next()

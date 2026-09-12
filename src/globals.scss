@@ -21,5 +21,7 @@ $lightgreen: #4c4;
 }
 
 @mixin color-transition {
-  transition: color 0.5s ease-in, background-color 0.5s ease-out;
+  transition:
+    color 0.5s ease-in,
+    background-color 0.5s ease-out;
 }

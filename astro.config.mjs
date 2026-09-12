@@ -1,10 +1,10 @@
-import { defineConfig } from 'astro/config';
-import react from '@astrojs/react';
-import sitemap from '@astrojs/sitemap';
+import { defineConfig } from "astro/config"
+import react from "@astrojs/react"
+import sitemap from "@astrojs/sitemap"
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://julienc.io',
+  site: "https://julienc.io",
   // Astro 7 changed the default to 'jsx', which strips the whitespace between
   // adjacent inline elements (e.g. between an icon and its label). Keep the
   // pre-v7 HTML-aware compression so rendered spacing is unchanged.
@@ -28,6 +28,6 @@ export default defineConfig({
   },
   // Configure markdown support
   markdown: {
-    syntaxHighlight: 'prism',
+    syntaxHighlight: "prism",
   },
-});
+})
