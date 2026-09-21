@@ -12,10 +12,10 @@
     "postcss": "^8.5.28",
     "prismjs": "^1.30.0",
     "prop-types": "^15.8.1",
-    "react": "^19.2.8",
-    "react-dom": "^19.2.8",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
     "react-markdown": "^10.0.0",
-    "sass": "^1.104.0",
+    "sass": "^1.104.1",
     "typeface-lato": "^1.1.13",
     "typeface-source-code-pro": "^1.1.13"
   },
@@ -24,7 +24,7 @@
     "@astrojs/react": "^6.0.5",
     "@astrojs/sitemap": "^3.7.4",
     "@playwright/test": "^1.63.0",
-    "astro": "^7.3.1",
+    "astro": "^7.3.2",
     "prettier": "^3.9.6",
     "typescript": "^6.0.3"
   },
