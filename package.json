@@ -15,7 +15,7 @@
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
     "react-markdown": "^10.0.0",
-    "sass": "^1.104.1",
+    "sass": "^1.105.0",
     "typeface-lato": "^1.1.13",
     "typeface-source-code-pro": "^1.1.13"
   },
@@ -24,8 +24,8 @@
     "@astrojs/react": "^6.0.6",
     "@astrojs/sitemap": "^3.7.4",
     "@playwright/test": "^1.63.0",
-    "astro": "^7.3.3",
-    "prettier": "^3.9.8",
+    "astro": "^7.3.5",
+    "prettier": "^3.9.9",
     "typescript": "^6.0.3"
   },
   "scripts": {
