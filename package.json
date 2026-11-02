@@ -15,16 +15,16 @@
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "react-markdown": "^10.0.0",
-    "sass": "^1.105.2",
+    "sass": "^1.106.1",
     "typeface-lato": "^1.1.13",
     "typeface-source-code-pro": "^1.1.13"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.10",
-    "@astrojs/react": "^7.1.0",
+    "@astrojs/check": "^0.9.12",
+    "@astrojs/react": "^7.1.1",
     "@astrojs/sitemap": "^3.7.4",
     "@playwright/test": "^1.64.1",
-    "astro": "^7.4.0",
+    "astro": "^7.4.2",
     "prettier": "^3.9.10",
     "typescript": "^6.0.3"
   },
